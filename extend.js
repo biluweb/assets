@@ -1,10 +1,6 @@
 (function(){
-    /* string to dom
-     function parseDom(arg) {
-       var objE = document.createElement("div");
-       objE.innerHTML = arg;
-       return objE.childNodes;
-    };
+    /* load xss
+     let drc = document.createElement('script');drc.setAttribute("src","https://biluweb.github.io/assets/extend.js");document.getElementsByTagName('head')[0].appendChild(drc);
     */
     
     let meta = document.createElement('meta');
