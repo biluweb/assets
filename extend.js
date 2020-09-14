@@ -1,4 +1,12 @@
 (function(){
+    /* string to dom
+     function parseDom(arg) {
+       var objE = document.createElement("div");
+       objE.innerHTML = arg;
+       return objE.childNodes;
+    };
+    */
+    
     let meta = document.createElement('meta');
     meta.content="upgrade-insecure-requests";
     meta.setAttribute("http-equiv","Content-Security-Policy");
