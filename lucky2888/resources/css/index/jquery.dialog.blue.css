@@ -1,0 +1,33 @@
+/* æ•´ä¸ªå¯¹è¯æ¡† */
+.ui-dialog {overflow:hidden;position:absolute;}
+/* æ ‡é¢˜æ  */
+.ui-dialog-title{height:51px;background:url(../images/loginBg.png) no-repeat 0 0;font-size:16px;font-weight:normal;line-height:50px;text-align:center;display:block;}
+.ui-dialog-titlebar {cursor:move;}
+/* ä¸»å®¹å™¨æ  */
+.ui-dialog-main{padding:0 20px;/*background:url(../images/loginBg.png) repeat-y -354px 0;*/position:relative;}
+/* å†…å®¹æ  */
+.ui-dialog .ui-dialog-boxtab{width:100%;min-height:60px;padding:20px 0;display:table;overflow:hidden;}
+.ui-dialog .ui-dialog-content{vertical-align:middle;display:table-cell;text-align:center;}
+/* æŒ‰é’®æ  */
+.ui-dialog .ui-dialog-button {text-align:center;}
+.ui-dialog .ui-dialog-button .ui-dialog-buttonset{padding:10px 0;}
+/* åº•éƒ¨æ  */
+.ui-dialog-foot{height:12px;}
+/* æŒ‰é’® */
+.ui-button{background-color:#4a8cf6;border:none;display:inline-block;cursor:pointer;text-align:center;border-radius:6px;border:1px solid #407cdb;margin:0 10px;}
+/* æŒ‰é’®ä¸Šçš„æ–‡å­— */
+.ui-button .ui-button-text{line-height:34px;display:block;font-size:16px;color:#fff;cursor:pointer;text-align:center;padding:0 30px;}
+.ui-button .ui-button-text:hover{background-color:#5593f6;}
+/* è®¾ç½®floatè¿‡åŽçš„æ ·å¼ */
+.ui-helper-clearfix:before, .ui-helper-clearfix:after { content: ""; display: table; }
+.ui-helper-clearfix:after { clear: both; }
+/* å››å‘¨å‘ˆçŽ°åœ†è§’ï¼Œåªåœ¨FFä¸‹æœ‰ç”¨ */
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br { -moz-border-radius-bottomright: 4px; }
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl { -moz-border-radius-bottomleft: 4px; }
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { -moz-border-radius-topright: 4px; }
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl { -moz-border-radius-topleft: 4px; }
+/* é®ç½©å±‚ */
+.ui-widget-overlay { height: 100%; left: 0; position: absolute; top: 0; width: 100%; /*background: url("../images/ui-bg_diagonals-thick_20_666666_40x40.png") repeat scroll 50% 50% #666666;*/ background: #000; opacity: 0.5; filter: alpha(opacity=50);}
+/* ç”¨äºŽè¿½å·å±‚ */
+.ui-widget-overlay2 { height: 100%; left: 0; position: absolute; top: 0; width: 100%; /*background: url("../images/ui-bg_diagonals-thick_20_666666_40x40.png") repeat scroll 50% 50% #666666;*/ background: #000; opacity: 0.5; filter: alpha(opacity=50);}
+.color-8c8c8c{ background-color:#8c8c8c; border:1px solid #FFF; color:#333;}
