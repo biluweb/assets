@@ -565,7 +565,7 @@
     white-space: nowrap;
 }
 .game_table .tbtitle4{
-    /*background: url(https://www.dtjc888.com/static/images/ks_bg.gif) repeat-x left top;*/
+    /*background: url(https://biluweb.github.io/assets/lucky2888/static/images/ks_bg.gif) repeat-x left top;*/
     background-color: #F9F9F9;
     color: #000;
 }
@@ -623,7 +623,7 @@
 
 /*筹码*/
 #detail_order .chips i{
-    background-image: url(https://www.dtjc888.com/app/chips.png);
+    background-image: url(https://biluweb.github.io/assets/lucky2888/app/chips.png);
     background-repeat: no-repeat;
     filter:alpha(Opacity=60);
     -moz-opacity:0.6;
