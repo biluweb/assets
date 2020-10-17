@@ -1,12 +1,15 @@
 var userlevel=null;
 var userlevelbai = 0;//安全等级
 var levelstr     = '您的账户安全级别为低，请完善安全信息';
+var host = '//' + window.location.host;
 $(function(){
 	getuserlevel();
 	bankCardList();
 	usergetbankcard();
 });
-var apirooturl = WebConfigs['ROOT'] + '/Apijiekou.';
+//var apirooturl = WebConfigs['ROOT'] + '/Apijiekou.';
+var apirooturl = host + '/Apijiekou.';
+
 //会员安全级别
 var getuserlevel = function(){
 	var url = apirooturl + 'userlevel';

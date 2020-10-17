@@ -213,7 +213,7 @@ require(['jquery','amazeui','thouch','ycommon','icon','zclip','area','way','clip
             //cookie.get('fav_lottery');
         }
 
-        var host = 'http://' + window.location.host;
+        var host = '//' + window.location.host;
         var apirooturl = host + '/Apijiekou.';
         //获取彩票列表
         function getLottery(typeid,index){

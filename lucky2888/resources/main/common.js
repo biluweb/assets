@@ -1,4 +1,4 @@
-var host = 'http://' + window.location.host;
+var host = '//' + window.location.host;
 var apirooturl = host + '/Apijiekou.';
 // var host = WebConfigs["ROOT"];
 // var apirooturl = WebConfigs["ROOT"] + '/Apijiekou.';

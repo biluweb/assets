@@ -1,4 +1,4 @@
-var host = 'http://' + window.location.host;
+var host = '//' + window.location.host;
 var apirooturl = host + '/Apijiekou.';
 var kefuurl = 'http://tb.53kf.com/kfimg.php?arg=10144747&style=1',
 	qqkefu  = 'http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes';
