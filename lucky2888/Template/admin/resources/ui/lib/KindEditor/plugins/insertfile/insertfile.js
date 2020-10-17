@@ -3,8 +3,8 @@
 * Copyright (C) 2006-2011 kindsoft.net
 *
 * @author Roddy <luolonghao@gmail.com>
-* @site http://www.kindsoft.net/
-* @licence http://www.kindsoft.net/license.php
+* @site //www.kindsoft.net/
+* @licence //www.kindsoft.net/license.php
 *******************************************************************************/
 
 KindEditor.plugin('insertfile', function(K) {
@@ -17,7 +17,7 @@ KindEditor.plugin('insertfile', function(K) {
 		filePostName = K.undef(self.filePostName, 'imgFile'),
 		lang = self.lang(name + '.');
 	self.plugin.fileDialog = function(options) {
-		var fileUrl = K.undef(options.fileUrl, 'http://'),
+		var fileUrl = K.undef(options.fileUrl, '//'),
 			fileTitle = K.undef(options.fileTitle, ''),
 			clickFn = options.clickFn;
 		var html = [
@@ -49,7 +49,7 @@ KindEditor.plugin('insertfile', function(K) {
 				click : function(e) {
 					var url = K.trim(urlBox.val()),
 						title = titleBox.val();
-					if (url == 'http://' || K.invalidUrl(url)) {
+					if (url == '//' || K.invalidUrl(url)) {
 						alert(self.lang('invalidUrl'));
 						urlBox[0].focus();
 						return;

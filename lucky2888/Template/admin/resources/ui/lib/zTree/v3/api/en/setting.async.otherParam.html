@@ -22,7 +22,7 @@
 	<pre xmlns=""><code>var setting = {
 	async: {
 		enable: true,
-		url: "http://host/getNode.php",
+		url: "//host/getNode.php",
 		<span style="color:red">otherParam: ["id", "1", "name", "test"]</span>
 	}
 };
@@ -31,7 +31,7 @@ when zTree sends the ajax request, the query string will be like this: id=1&name
 	<pre xmlns=""><code>var setting = {
 	async: {
 		enable: true,
-		url: "http://host/getNode.php",
+		url: "//host/getNode.php",
 		<span style="color:red">otherParam: { "id":"1", "name":"test"}</span>
 	}
 };

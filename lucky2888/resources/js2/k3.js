@@ -1106,7 +1106,7 @@ var ab=0;
 function calljustkjno(kname,qihao,kjno,ktime,b){
 	$.ajax({
 		 type : "POST",
-		 url : "http://localhost/gdheyi/findNewK3",
+		 url : "//localhost/gdheyi/findNewK3",
 		 data : {
 			 kname :  kname,
 			 qihao  :  qihao,

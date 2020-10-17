@@ -1,6 +1,6 @@
 /**
  * @preserve jQuery DateTimePicker plugin v2.1.9
- * @homepage http://xdsoft.net/jqplugins/datetimepicker/
+ * @homepage //xdsoft.net/jqplugins/datetimepicker/
  * (c) 2014, Chupurnov Valeriy.
  */
 (function( $ ) {
@@ -300,7 +300,7 @@
 			options = ($.isPlainObject(opt)||!opt)?$.extend(true,{},default_options,opt):$.extend({},default_options),
 			createDateTimePicker = function( input ) {
 				var datetimepicker = $('<div '+(options.id?'id="'+options.id+'"':'')+' '+(options.style?'style="'+options.style+'"':'')+' class="xdsoft_datetimepicker xdsoft_noselect '+options.className+'"></div>'),
-					xdsoft_copyright = $('<div class="xdsoft_copyright"><a target="_blank" href="http://xdsoft.net/jqplugins/datetimepicker/">xdsoft.net</a></div>'),
+					xdsoft_copyright = $('<div class="xdsoft_copyright"><a target="_blank" href="//xdsoft.net/jqplugins/datetimepicker/">xdsoft.net</a></div>'),
 					datepicker = $('<div class="xdsoft_datepicker active"></div>'),
 					mounth_picker = $('<div class="xdsoft_mounthpicker"><button type="button" class="xdsoft_prev"></button><button type="button" class="xdsoft_today_button"></button><div class="xdsoft_label xdsoft_month"><span></span></div><div class="xdsoft_label xdsoft_year"><span></span></div><button type="button" class="xdsoft_next"></button></div>'),
 					calendar = $('<div class="xdsoft_calendar"></div>'),
@@ -1114,7 +1114,7 @@
 	};
 })( jQuery );
 
-//http://www.xaprb.com/blog/2005/12/12/javascript-closures-for-runtime-efficiency/
+////www.xaprb.com/blog/2005/12/12/javascript-closures-for-runtime-efficiency/
 /*
  * Copyright (C) 2004 Baron Schwartz <baron at sequent dot org>
  *
@@ -1131,12 +1131,12 @@ Date.parseFunctions={count:0};Date.parseRegexes=[];Date.formatFunctions={count:0
 
 //https://github.com/brandonaaron/jquery-mousewheel/blob/master/jquery.mousewheel.js
 /*
- * Copyright (c) 2013 Brandon Aaron (http://brandonaaron.net)
+ * Copyright (c) 2013 Brandon Aaron (//brandonaaron.net)
  *
  * Licensed under the MIT License (LICENSE.txt).
  *
- * Thanks to: http://adomas.org/javascript-mouse-wheel/ for some pointers.
- * Thanks to: Mathias Bank(http://www.mathias-bank.de) for a scope bug fix.
+ * Thanks to: //adomas.org/javascript-mouse-wheel/ for some pointers.
+ * Thanks to: Mathias Bank(//www.mathias-bank.de) for a scope bug fix.
  * Thanks to: Seamus Leahy for adding deltaX and deltaY
  *
  * Version: 3.1.3

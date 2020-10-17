@@ -3,8 +3,8 @@
 * Copyright (C) 2006-2011 kindsoft.net
 *
 * @author Roddy <luolonghao@gmail.com>
-* @site http://www.kindsoft.net/
-* @licence http://www.kindsoft.net/license.php
+* @site //www.kindsoft.net/
+* @licence //www.kindsoft.net/license.php
 *******************************************************************************/
 
 KindEditor.plugin('image', function(K) {
@@ -98,7 +98,7 @@ KindEditor.plugin('image', function(K) {
 			yesBtn : {
 				name : self.lang('yes'),
 				click : function(e) {
-					// Bugfix: http://code.google.com/p/kindeditor/issues/detail?id=319
+					// Bugfix: //code.google.com/p/kindeditor/issues/detail?id=319
 					if (dialog.isLoading) {
 						return;
 					}
@@ -125,7 +125,7 @@ KindEditor.plugin('image', function(K) {
 							return false;
 						}
 					});
-					if (url == 'http://' || K.invalidUrl(url)) {
+					if (url == '//' || K.invalidUrl(url)) {
 						alert(self.lang('invalidUrl'));
 						urlBox[0].focus();
 						return;
@@ -287,7 +287,7 @@ KindEditor.plugin('image', function(K) {
 		edit : function() {
 			var img = self.plugin.getSelectedImage();
 			self.plugin.imageDialog({
-				imageUrl : img ? img.attr('data-ke-src') : 'http://',
+				imageUrl : img ? img.attr('data-ke-src') : '//',
 				imageWidth : img ? img.width() : '',
 				imageHeight : img ? img.height() : '',
 				imageTitle : img ? img.attr('title') : '',

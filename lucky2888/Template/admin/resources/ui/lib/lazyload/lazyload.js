@@ -34,7 +34,7 @@
             no_fake_img_loader          : false,
             placeholder_data_img        : 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC',
             // for IE6\7 that does not support data image
-            placeholder_real_img        : 'http://ditu.baidu.cn/yyfm/lazyload/0.0.1/img/placeholder.png'
+            placeholder_real_img        : '//ditu.baidu.cn/yyfm/lazyload/0.0.1/img/placeholder.png'
             // todo : 将某些属性用global来配置，而不是每次在$(selector).lazyload({})内配置
         },
         isIOS = (/(?:iphone|ipod|ipad).*os/gi).test(navigator.appVersion),

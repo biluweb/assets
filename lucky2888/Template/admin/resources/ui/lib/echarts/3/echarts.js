@@ -4293,7 +4293,7 @@ define('echarts/model/OptionManager',['require','zrender/core/util'],function (r
     }
 
     /**
-     * @see <http://www.w3.org/TR/css3-mediaqueries/#media1>
+     * @see <//www.w3.org/TR/css3-mediaqueries/#media1>
      * Support: width, height, aspectRatio
      * Can use max or min as prefix.
      */
@@ -5357,7 +5357,7 @@ define('zrender/mixin/Transformable',['require','../core/matrix','../core/vector
 
 /**
  * 缓动代码来自 https://github.com/sole/tween.js/blob/master/src/Tween.js
- * @see http://sole.github.io/tween.js/examples/03_graphs.html
+ * @see //sole.github.io/tween.js/examples/03_graphs.html
  * @exports zrender/animation/easing
  */
 define('zrender/animation/easing',[],function () {
@@ -7314,7 +7314,7 @@ define('zrender/Element',['require','./core/guid','./mixin/Eventful','./mixin/Tr
          * 用于裁剪的路径(shape)，所有 Group 内的路径在绘制时都会被这个路径裁剪
          * 该路径会继承被裁减对象的变换
          * @type {module:zrender/graphic/Path}
-         * @see http://www.w3.org/TR/2dcontext/#clipping-region
+         * @see //www.w3.org/TR/2dcontext/#clipping-region
          * @readOnly
          */
         clipPath: null,
@@ -8817,7 +8817,7 @@ define('zrender/core/curve',['require','./vector'],function(require) {
         x0, y0, x1, y1, x2, y2, x3, y3,
         x, y, out
     ) {
-        // http://pomax.github.io/bezierinfo/#projections
+        // //pomax.github.io/bezierinfo/#projections
         var t;
         var interval = 0.005;
         var d = Infinity;
@@ -9016,7 +9016,7 @@ define('zrender/core/curve',['require','./vector'],function(require) {
         x0, y0, x1, y1, x2, y2,
         x, y, out
     ) {
-        // http://pomax.github.io/bezierinfo/#projections
+        // //pomax.github.io/bezierinfo/#projections
         var t;
         var interval = 0.005;
         var d = Infinity;
@@ -9336,7 +9336,7 @@ define('zrender/core/bbox',['require','./vector','./curve'],function (require) {
  * 可以用于 isInsidePath 判断以及获取boundingRect
  *
  * @module zrender/core/PathProxy
- * @author Yi Shen (http://www.github.com/pissang)
+ * @author Yi Shen (//www.github.com/pissang)
  */
 
  // TODO getTotalLength, getPointAtLength
@@ -11403,7 +11403,7 @@ define('zrender/tool/path',['require','../graphic/Path','../core/PathProxy','./t
     return {
         /**
          * Create a Path object from path string data
-         * http://www.w3.org/TR/SVG/paths.html#PathData
+         * //www.w3.org/TR/SVG/paths.html#PathData
          * @param  {Object} opts Other options
          */
         createFromString: function (str, opts) {
@@ -13223,7 +13223,7 @@ define('zrender/core/env',[],function() {
             // 原生canvas支持，改极端点了
             // canvasSupported : !(browser.ie && parseFloat(browser.version) < 9)
             canvasSupported : document.createElement('canvas').getContext ? true : false,
-            // @see <http://stackoverflow.com/questions/4817029/whats-the-best-way-to-detect-a-touch-screen-device-using-javascript>
+            // @see <//stackoverflow.com/questions/4817029/whats-the-best-way-to-detect-a-touch-screen-device-using-javascript>
             touchEventsSupported: 'ontouchstart' in window  // works on most browsers
                 || navigator.maxTouchPoints                 // works on IE10/11 and Surface
         };
@@ -14221,7 +14221,7 @@ define('zrender/Storage',['require','./core/util','./container/Group'],function 
  * @author pissang(https://github.com/pissang)
  */
 // TODO Additive animation
-// http://iosoteric.com/additive-animations-animatewithduration-in-ios-8/
+// //iosoteric.com/additive-animations-animatewithduration-in-ios-8/
 // https://developer.apple.com/videos/wwdc2014/#236
 define('zrender/animation/Animation',['require','../core/util','../core/event','./Animator'],function(require) {
 
@@ -19436,7 +19436,7 @@ define('echarts/chart/helper/SymbolDraw',['require','../../util/graphic','./Symb
     return SymbolDraw;
 });
 // Hirschberg's algorithm
-// http://en.wikipedia.org/wiki/Hirschberg%27s_algorithm
+// //en.wikipedia.org/wiki/Hirschberg%27s_algorithm
 
 /**
  * @module zrender/core/arrayDiff
@@ -20706,7 +20706,7 @@ define('echarts/scale/Scale',['require','../util/clazz'],function (require) {
  * Linear continuous scale
  * @module echarts/coord/scale/Ordinal
  *
- * http://en.wikipedia.org/wiki/Level_of_measurement
+ * //en.wikipedia.org/wiki/Level_of_measurement
  */
 
 // FIXME only one data
@@ -25604,7 +25604,7 @@ define('echarts/component/tooltip/TooltipContent',['require','zrender/core/util'
             clearTimeout(this._hideTimeout);
 
             this.el.style.cssText = gCssText + assembleCssText(tooltipModel)
-                // http://stackoverflow.com/questions/21125587/css3-transition-not-working-in-chrome-anymore
+                // //stackoverflow.com/questions/21125587/css3-transition-not-working-in-chrome-anymore
                 + ';left:' + this._x + 'px;top:' + this._y + 'px;';
 
             this._show = true;
@@ -31545,7 +31545,7 @@ define('echarts/chart/treemap/TreemapSeries',['require','../../model/Series','..
             // data: {
             //      value: [],
             //      children: [],
-            //      link: 'http://xxx.xxx.xxx',
+            //      link: '//xxx.xxx.xxx',
             //      target: 'blank' or 'self'
             // }
         },
@@ -48744,7 +48744,7 @@ define('echarts/component/toolbox/feature/DataView',['require','zrender/core/uti
         buttonContainer.appendChild(refreshButton);
         buttonContainer.appendChild(closeButton);
 
-        // http://stackoverflow.com/questions/6637341/use-tab-to-indent-in-textarea
+        // //stackoverflow.com/questions/6637341/use-tab-to-indent-in-textarea
         eventTool.addEventListener(textarea, 'keydown', function (e) {
             if ((e.keyCode || e.which) === 9) {
                 // get caret position/selection
@@ -49416,7 +49416,7 @@ define('zrender/vml/core',['require','../core/env'],function (require) {
             doc.createStyleSheet().addRule('.zrvml', 'behavior:url(#default#VML)');
         }
         else {
-            // http://msdn.microsoft.com/en-us/library/ms531194%28VS.85%29.aspx
+            // //msdn.microsoft.com/en-us/library/ms531194%28VS.85%29.aspx
             styleSheets[0].addRule('.zrvml', 'behavior:url(#default#VML)')
         }
     }
@@ -49427,7 +49427,7 @@ define('zrender/vml/core',['require','../core/env'],function (require) {
         createNode: createNode
     };
 });
-// http://www.w3.org/TR/NOTE-VML
+// //www.w3.org/TR/NOTE-VML
 // TODO Use proxy like svg instead of overwrite brush methods
 define('zrender/vml/graphic',['require','../core/env','../core/vector','../core/BoundingRect','../core/PathProxy','../tool/color','../contain/text','../graphic/mixin/RectText','../graphic/Displayable','../graphic/Image','../graphic/Text','../graphic/Path','../graphic/Gradient','./core'],function (require) {
 

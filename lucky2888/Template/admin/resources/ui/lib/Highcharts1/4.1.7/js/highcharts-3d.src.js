@@ -113,7 +113,7 @@ function defined(obj) {
 	return obj !== undefined && obj !== null;
 }
 
-//Shoelace algorithm -- http://en.wikipedia.org/wiki/Shoelace_formula
+//Shoelace algorithm -- //en.wikipedia.org/wiki/Shoelace_formula
 function shapeArea(vertexes) {
 	var area = 0,
 		i,

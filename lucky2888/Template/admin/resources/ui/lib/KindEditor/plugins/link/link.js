@@ -3,8 +3,8 @@
 * Copyright (C) 2006-2011 kindsoft.net
 *
 * @author Roddy <luolonghao@gmail.com>
-* @site http://www.kindsoft.net/
-* @licence http://www.kindsoft.net/license.php
+* @site //www.kindsoft.net/
+* @licence //www.kindsoft.net/license.php
 *******************************************************************************/
 
 KindEditor.plugin('link', function(K) {
@@ -32,7 +32,7 @@ KindEditor.plugin('link', function(K) {
 						name : self.lang('yes'),
 						click : function(e) {
 							var url = K.trim(urlBox.val());
-							if (url == 'http://' || K.invalidUrl(url)) {
+							if (url == '//' || K.invalidUrl(url)) {
 								alert(self.lang('invalidUrl'));
 								urlBox[0].focus();
 								return;
@@ -44,7 +44,7 @@ KindEditor.plugin('link', function(K) {
 				div = dialog.div,
 				urlBox = K('input[name="url"]', div),
 				typeBox = K('select[name="type"]', div);
-			urlBox.val('http://');
+			urlBox.val('//');
 			typeBox[0].options[0] = new Option(lang.newWindow, '_blank');
 			typeBox[0].options[1] = new Option(lang.selfWindow, '');
 			self.cmd.selection();

@@ -340,7 +340,7 @@ $(function () {
                                     if (data.Code == 1) {
                                         alert(data.StrCode);
                                         var _localtionName = window.location.host == undefined ? '/index.html' : window.location.host;
-                                        window.location.href = "http://" + _localtionName + "/index.html";
+                                        window.location.href = "//" + _localtionName + "/index.html";
                                     } else {
                                         alert(data.StrCode);
                                     }
@@ -571,7 +571,7 @@ $(function () {
                 dataType: "json",
                 success: function (data) {
                     if (data && data.Code == "1") {
-                        window.location.href = "http://" + window.location.host + "/login.html";
+                        window.location.href = "//" + window.location.host + "/login.html";
                     } else {
                         alert(data.StrCode);
                     }
@@ -2052,7 +2052,7 @@ $(function () {
             icon: "warning",
             ok: function () {
                 if (the_CD_Id != undefined && the_CD_Id != "") {
-                    var theUrl = "http://" + window.location.host + "/user_account_invest_tzDetail/" + the_CD_Id + ".html";
+                    var theUrl = "//" + window.location.host + "/user_account_invest_tzDetail/" + the_CD_Id + ".html";
 
                     $.ajax({
                         type: "post",
@@ -3076,7 +3076,7 @@ $(function () {
                                         } else {
                                             var _theUrl = window.location.host;
                                             setTimeout(function () {
-                                                window.location.href = "http://" + _theUrl + '/user_account_proxy_cusmag.html';
+                                                window.location.href = "//" + _theUrl + '/user_account_proxy_cusmag.html';
                                             }, 1500);
                                         }
                                     } else {
@@ -3831,11 +3831,11 @@ $(function () {
                                     break;
                                 case "3":
                                 case 3:
-                                    strVar += " <td><a href='http://" + HostUrl + "/qiyue_creat/" + _TrData[i].user_id + ".html'>去修改契约</a></td>";
+                                    strVar += " <td><a href='//" + HostUrl + "/qiyue_creat/" + _TrData[i].user_id + ".html'>去修改契约</a></td>";
                                     break;
                                 case "4":
                                 case 4:
-                                    strVar += " <td><a href='http://" + HostUrl + "/qiyue_creat/" + _TrData[i].user_id + ".html'>去签订契约</a></td>";
+                                    strVar += " <td><a href='//" + HostUrl + "/qiyue_creat/" + _TrData[i].user_id + ".html'>去签订契约</a></td>";
                                     break;
                                 default:
                                     break;
@@ -3859,7 +3859,7 @@ $(function () {
                                 case "3":
                                 case 3:
                                     strVar += " <td>契约已拒绝</td>";
-                                    strVar += " <td><a href='http://" + HostUrl + "/qiyue_creat/" + _TrData[i].user_id + ".html'>去修改契约</a></td>";
+                                    strVar += " <td><a href='//" + HostUrl + "/qiyue_creat/" + _TrData[i].user_id + ".html'>去修改契约</a></td>";
                                     break;
                                 case "4":
                                 case 4:

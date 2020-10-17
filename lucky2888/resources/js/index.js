@@ -325,7 +325,7 @@ $(function(){
 
 
 	if ($(".bdsharebuttonbox").size() > 0) {
-	    window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+	    window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = '//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
 	}
 })
 
@@ -397,10 +397,10 @@ function ShowCompatibleLoyout() {
 			      + "<div class='browser'>"
 			      + "<ul>"
 			      + "<li><a class='chrome' href='https://www.google.com/chrome/' target='_blank'></a></li>"
-			      + "<li><a class='firefox' href='http://www.mozilla.org/en-US/firefox/new/' target='_blank'></a></li>"
-			      + "<li><a class='ie9' href='http://windows.microsoft.com/en-US/internet-explorer/downloads/ie/' target='_blank'></a></li>"
-			      + "<li><a class='safari' href='http://www.apple.com/safari/download/' target='_blank'></a></li>"
-			      + "<li><a class='opera' href='http://www.opera.com/download/' target='_blank'></a></li>"
+			      + "<li><a class='firefox' href='//www.mozilla.org/en-US/firefox/new/' target='_blank'></a></li>"
+			      + "<li><a class='ie9' href='//windows.microsoft.com/en-US/internet-explorer/downloads/ie/' target='_blank'></a></li>"
+			      + "<li><a class='safari' href='//www.apple.com/safari/download/' target='_blank'></a></li>"
+			      + "<li><a class='opera' href='//www.opera.com/download/' target='_blank'></a></li>"
 			      + "<ul>"
 			      + "</div>";
     var Cover_Container = "<div class='layout_Contianer'>" + Cover_Content + "</div>";

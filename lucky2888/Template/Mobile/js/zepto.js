@@ -1478,7 +1478,7 @@ window.$ === undefined && (window.$ = Zepto)
             result = xhr.responseText
 
             try {
-              // http://perfectionkills.com/global-eval-what-are-the-options/
+              // //perfectionkills.com/global-eval-what-are-the-options/
               // sanitize response accordingly if data filter callback provided
               result = ajaxDataFilter(result, dataType, settings)
               if (dataType == 'script')    (1,eval)(result)

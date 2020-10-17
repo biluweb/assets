@@ -146,7 +146,7 @@ $(function () {
                     alert(aStrCode);
                     var _localtionName = window.location.host == undefined ? '/index.html' : window.location.host;
                     setTimeout(function () {
-                        window.location.href = "http://" + _localtionName + "/login.html";
+                        window.location.href = "//" + _localtionName + "/login.html";
                     }, 2000)
                 } else {
                     alert(aStrCode);

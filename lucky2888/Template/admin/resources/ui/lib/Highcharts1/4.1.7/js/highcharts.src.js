@@ -38,7 +38,7 @@ var UNDEFINED,
 	isWebKit = /AppleWebKit/.test(userAgent),
 	isFirefox = /Firefox/.test(userAgent),
 	isTouchDevice = /(Mobile|Android|Windows Phone)/.test(userAgent),
-	SVG_NS = 'http://www.w3.org/2000/svg',
+	SVG_NS = '//www.w3.org/2000/svg',
 	hasSVG = !!doc.createElementNS && !!doc.createElementNS(SVG_NS, 'svg').createSVGRect,
 	hasBidiBug = isFirefox && parseInt(userAgent.split('Firefox/')[1], 10) < 4, // issue #38
 	useCanVG = !hasSVG && !isIE && !!doc.createElement('canvas').getContext,
@@ -398,7 +398,7 @@ function getTZOffset(timestamp) {
 }
 
 /**
- * Based on http://www.php.net/manual/en/function.strftime.php
+ * Based on //www.php.net/manual/en/function.strftime.php
  * @param {String} format
  * @param {Number} timestamp
  * @param {Boolean} capitalize
@@ -750,7 +750,7 @@ timeUnits = {
  */
 Highcharts.numberFormat = function (number, decimals, decPoint, thousandsSep) {
 	var lang = defaultOptions.lang,
-		// http://kevin.vanzonneveld.net/techblog/article/javascript_equivalent_for_phps_number_format/
+		// //kevin.vanzonneveld.net/techblog/article/javascript_equivalent_for_phps_number_format/
 		n = +number || 0,
 		c = decimals === -1 ?
 			mathMin((n.toString().split('.')[1] || '').length, 20) : // Preserve decimals. Not huge numbers (#3793).
@@ -1091,7 +1091,7 @@ pathAnim = {
 		 */
 		removeEvent: function (el, eventType, handler) {
 			// workaround for jQuery issue with unbinding custom events:
-			// http://forum.jQuery.com/topic/javascript-error-when-unbinding-a-custom-event-using-jQuery-1-4-2
+			// //forum.jQuery.com/topic/javascript-error-when-unbinding-a-custom-event-using-jQuery-1-4-2
 			var func = doc.removeEventListener ? 'removeEventListener' : 'detachEvent';
 			if (doc[func] && el && !el[func]) {
 				el[func] = function () {};
@@ -1268,8 +1268,8 @@ defaultOptions = {
 	global: {
 		useUTC: true,
 		//timezoneOffset: 0,
-		canvasToolsURL: 'http://code.highcharts.com/4.1.7/modules/canvas-tools.js',
-		VMLRadialGradientURL: 'http://code.highcharts.com/4.1.7/gfx/vml-radial-gradient.png'
+		canvasToolsURL: '//code.highcharts.com/4.1.7/modules/canvas-tools.js',
+		VMLRadialGradientURL: '//code.highcharts.com/4.1.7/gfx/vml-radial-gradient.png'
 	},
 	chart: {
 		//animation: true,
@@ -1564,7 +1564,7 @@ defaultOptions = {
 	credits: {
 		enabled: true,
 		text: 'Highcharts.com',
-		href: 'http://www.highcharts.com',
+		href: '//www.highcharts.com',
 		position: {
 			align: 'right',
 			x: -10,
@@ -1967,7 +1967,7 @@ SVGElement.prototype = {
 			styles.textRendering = 'geometricPrecision';
 		}
 
-		/* Selective side-by-side testing in supported browser (http://jsfiddle.net/highcharts/73L1ptrh/)
+		/* Selective side-by-side testing in supported browser (//jsfiddle.net/highcharts/73L1ptrh/)
 		if (elem.textContent.indexOf('2.') === 0) {
 			elem.style['text-shadow'] = 'none';
 			supports = false;
@@ -3695,7 +3695,7 @@ SVGRenderer.prototype = {
 
 		// set the href in the xlink namespace
 		if (elemWrapper.element.setAttributeNS) {
-			elemWrapper.element.setAttributeNS('http://www.w3.org/1999/xlink',
+			elemWrapper.element.setAttributeNS('//www.w3.org/1999/xlink',
 				'href', src);
 		} else {
 			// could be exporting in IE
@@ -4052,7 +4052,7 @@ SVGRenderer.prototype = {
 		fontSize = /px/.test(fontSize) ? pInt(fontSize) : /em/.test(fontSize) ? parseFloat(fontSize) * 12 : 12;
 
 		// Empirical values found by comparing font size and bounding box height.
-		// Applies to the default font family. http://jsfiddle.net/highcharts/7xvn7/
+		// Applies to the default font family. //jsfiddle.net/highcharts/7xvn7/
 		lineHeight = fontSize < 24 ? fontSize + 3 : mathRound(fontSize * 1.2);
 		baseline = mathRound(lineHeight * 0.8);
 
@@ -4768,7 +4768,7 @@ VMLElement = {
 		// but it can probably be implemented for Firefox 3.5+ on user request. FF3.5+
 		// has support for CSS3 transform. The getBBox method also needs to be updated
 		// to compensate for the rotation, like it currently does for SVG.
-		// Test case: http://jsfiddle.net/highcharts/Ybt44/
+		// Test case: //jsfiddle.net/highcharts/Ybt44/
 
 		var rotation = this.rotation,
 			costheta = mathCos(rotation * deg2rad),
@@ -5749,7 +5749,7 @@ if (useCanVG) {
 	 */
 	Highcharts.CanVGRenderer = CanVGRenderer = function () {
 		// Override the global SVG namespace to fake SVG/HTML that accepts CSS
-		SVG_NS = 'http://www.w3.org/1999/xhtml';
+		SVG_NS = '//www.w3.org/1999/xhtml';
 	};
 
 	/**
@@ -16065,7 +16065,7 @@ defaultPlotOptions.column = merge(defaultSeriesOptions, {
 		verticalAlign: null, // auto
 		y: null
 	},
-	startFromThreshold: true, // docs: http://jsfiddle.net/highcharts/hz8fopan/14/
+	startFromThreshold: true, // docs: //jsfiddle.net/highcharts/hz8fopan/14/
 	stickyTracking: false,
 	tooltip: {
 		distance: 6

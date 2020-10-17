@@ -3,8 +3,8 @@
 * Copyright (C) 2006-2011 kindsoft.net
 *
 * @author Roddy <luolonghao@gmail.com>
-* @site http://www.kindsoft.net/
-* @licence http://www.kindsoft.net/license.php
+* @site //www.kindsoft.net/
+* @licence //www.kindsoft.net/license.php
 *******************************************************************************/
 
 KindEditor.plugin('flash', function(K) {
@@ -51,7 +51,7 @@ KindEditor.plugin('flash', function(K) {
 						var url = K.trim(urlBox.val()),
 							width = widthBox.val(),
 							height = heightBox.val();
-						if (url == 'http://' || K.invalidUrl(url)) {
+						if (url == '//' || K.invalidUrl(url)) {
 							alert(self.lang('invalidUrl'));
 							urlBox[0].focus();
 							return;
@@ -82,7 +82,7 @@ KindEditor.plugin('flash', function(K) {
 			viewServerBtn = K('[name="viewServer"]', div),
 			widthBox = K('[name="width"]', div),
 			heightBox = K('[name="height"]', div);
-			urlBox.val('http://');
+			urlBox.val('//');
 
 			if (allowFlashUpload) {
 				var uploadbutton = K.uploadbutton({

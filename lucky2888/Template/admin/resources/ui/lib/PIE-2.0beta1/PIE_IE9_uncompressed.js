@@ -1,7 +1,7 @@
 /*
 PIE: CSS3 rendering for IE
 Version 2.0beta1
-http://css3pie.com
+//css3pie.com
 Dual-licensed for use under the Apache License Version 2.0 or the General Public License (GPL) Version 2.
 */
 (function( win, doc ) {
@@ -85,7 +85,7 @@ try {
 (function() {
     /*
      * IE version detection approach by James Padolsey, with modifications -- from
-     * http://james.padolsey.com/javascript/detect-ie-in-js-using-conditional-comments/
+     * //james.padolsey.com/javascript/detect-ie-in-js-using-conditional-comments/
      */
     var ieVersion = 4,
         div = doc.createElement('div'),
@@ -751,9 +751,9 @@ PIE.Angle = (function() {
 PIE.Color = (function() {
 
     /*
-     * hsl2rgb from http://codingforums.com/showthread.php?t=11156
-     * code by Jason Karl Davis (http://www.jasonkarldavis.com)
-     * swiped from cssSandpaper by Zoltan Hawryluk (http://www.useragentman.com/blog/csssandpaper-a-css3-javascript-library/)
+     * hsl2rgb from //codingforums.com/showthread.php?t=11156
+     * code by Jason Karl Davis (//www.jasonkarldavis.com)
+     * swiped from cssSandpaper by Zoltan Hawryluk (//www.useragentman.com/blog/csssandpaper-a-css3-javascript-library/)
      * modified for formatting and size optimizations
      */
     function hsl2rgb( h, s, l ) {
@@ -2349,7 +2349,7 @@ PIE.IE9BorderImageRenderer = PIE.RendererBase.newRenderer( {
             // Build the SVG for the border-image rendering. Add each piece as a pattern, which is then stretched
             // or repeated as the fill of a rect of appropriate size.
             svg = [
-                '<svg width="' + elW + '" height="' + elH + '" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">'
+                '<svg width="' + elW + '" height="' + elH + '" xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink">'
             ];
 
             function addImage( x, y, w, h, cropX, cropY, cropW, cropH, tileW, tileH ) {

@@ -5,11 +5,11 @@
 
 具体修改内容可参考：
 
-   * [http://www.ztree.me/v3/api.php zTree v3.x API 文档]
+   * [//www.ztree.me/v3/api.php zTree v3.x API 文档]
 
-   * [http://www.ztree.me/v3/demo.php#_101 zTree v3.x Demo 演示]
+   * [//www.ztree.me/v3/demo.php#_101 zTree v3.x Demo 演示]
 
-   * [http://www.ztree.me/v3/faq.php#_101 zTree v3.x 常见问题]
+   * [//www.ztree.me/v3/faq.php#_101 zTree v3.x 常见问题]
 
 </font>
 
@@ -55,7 +55,7 @@
    * 【修改】异步加载时，对于未加载子节点的父节点使用 expandNode 方法时， sonSign 设置为 true后，导致异步加载的节点无法正常显示的bug
    * 【修改】一次性加载全部数据，如果父节点 A 未展开，但下一级的父节点 A1 设置了 open=true 的时候，使用 expandAll 方法导致 A1 的下一级父节点出现重复的 bug
    * 【修改】增加对 iframe 的支持，可以只在主页面加载 zTree 的 js，在 iframe 内创建树 [https://github.com/zTree/zTree_v3/issues/7 Issue Info]
-   * 【修改】引入 exhide 扩展包 导致页面上同时加载多棵树时，根节点 的 连接线图标出现异常 的 bug [http://tieba.baidu.com/p/2277416574]
+   * 【修改】引入 exhide 扩展包 导致页面上同时加载多棵树时，根节点 的 连接线图标出现异常 的 bug [//tieba.baidu.com/p/2277416574]
    * 【修改】excheck & exedit 扩展包中事件代理获取节点 tId 的方法，保证适当修改 DOM 结构也能得到 tId
 
 *2013.03.11* v3.5.12
@@ -78,7 +78,7 @@
    * 【修改】Demo: checkbox_nocheck.html & checkbox_chkDisabled.html;
    * 【修改】Demo: edit_super.html，增加 showRenameBtn & showRemoveBtn 的演示
    * 【修改】Demo: asyncForAll, 将 post 修改为 get；为了避免由于 IE10 的 bug 造成的客户端 以及 服务端崩溃
-      IE10 ajax Post 无法提交参数的bug (http://bugs.jquery.com/ticket/12790)
+      IE10 ajax Post 无法提交参数的bug (//bugs.jquery.com/ticket/12790)
 
 *2012.12.21* v3.5.01
    * 【优化】clone 方法
@@ -133,8 +133,8 @@
 *2012.05.13* v3.2
    * 【增加】setting.data.key.url 允许修改 treeNode.url 属性
    * 【增加】getNodesByFilter(filter, isSingle) 方法
-   * 【增加】"与其他 DOM 拖拽互动" 的 Demo (http://www.ztree.me/v3/demo.php#_511)
-   * 【增加】"异步加载模式下全部展开" 的 Demo (http://www.ztree.me/v3/demo.php#_512)
+   * 【增加】"与其他 DOM 拖拽互动" 的 Demo (//www.ztree.me/v3/demo.php#_511)
+   * 【增加】"异步加载模式下全部展开" 的 Demo (//www.ztree.me/v3/demo.php#_512)
 
    * 【修改】代码结构，将 addNodes、removeNode、removeChildNodes 方法 和 beforeRemove、onRemove 回调 转移到 core 内
    * 【修改】IE7的环境下无子节点的父节点反复展开出现多余空行的 bug
@@ -211,4 +211,4 @@
    * 【修正】setting 配置更加合理，并且增加了若干项配置参数
    * 【修正】treeNode 节点数据的属性更加合理，并且增加了一些方法
    * 【修正】拖拽操作更加灵活方便，更容易制定自己的规则
-   * 【修正】其他若干修改，详细对比请参考 url：[http://www.ztree.me/v3/faq.php#_101 zTree v3.0 常见问题]
+   * 【修正】其他若干修改，详细对比请参考 url：[//www.ztree.me/v3/faq.php#_101 zTree v3.0 常见问题]

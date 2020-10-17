@@ -1,5 +1,5 @@
 (function () {
-  var s_hostname = 'http://'+window.location.hostname;
+  var s_hostname = '//'+window.location.hostname;
   var tm;
   var betTime = 0;
   var oldWinning_name = '';

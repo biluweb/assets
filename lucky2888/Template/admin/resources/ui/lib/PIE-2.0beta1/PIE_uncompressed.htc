@@ -1,7 +1,7 @@
 <!--
 PIE: CSS3 rendering for IE
 Version 2.0beta1
-http://css3pie.com
+//css3pie.com
 Dual-licensed for use under the Apache License Version 2.0 or the General Public License (GPL) Version 2.
 -->
 <PUBLIC:COMPONENT lightWeight="true">
@@ -121,7 +121,7 @@ if( el.readyState === 'complete' ) {
 //# IE will sometimes hang for a long time on unload of pages with .htc behaviors
 //# attached to many elements, if the script block is a certain size. We can work
 //# around this by including an empty vbscript block at the end. For more details:
-//# http://www.pcreview.co.uk/forums/htc-components-512-bytes-javascript-slow-unload-t727396.html
-//# http://code.google.com/p/svgweb/source/browse/trunk/src/svg.htc
+//# //www.pcreview.co.uk/forums/htc-components-512-bytes-javascript-slow-unload-t727396.html
+//# //code.google.com/p/svgweb/source/browse/trunk/src/svg.htc
 <script type="text/vbscript"></script>
 </PUBLIC:COMPONENT>

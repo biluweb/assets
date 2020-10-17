@@ -98,7 +98,7 @@ defaultOptions.exporting = {
 	//enabled: true,
 	//filename: 'chart',
 	type: 'image/png',
-	url: 'http://export.highcharts.com/',
+	url: '//export.highcharts.com/',
 	//width: undefined,
 	//scale: 2
 	buttons: {
@@ -202,7 +202,7 @@ extend(Chart.prototype, {
 			.replace(/symbolName="[^"]+"/g, '')
 			.replace(/jQuery[0-9]+="[^"]+"/g, '')
 			.replace(/url\([^#]+#/g, 'url(#')
-			.replace(/<svg /, '<svg xmlns:xlink="http://www.w3.org/1999/xlink" ')
+			.replace(/<svg /, '<svg xmlns:xlink="//www.w3.org/1999/xlink" ')
 			.replace(/ (NS[0-9]+\:)?href=/g, ' xlink:href=') // #3567
 			.replace(/\n/, ' ')
 			// Any HTML added to the container after the SVG (#894)

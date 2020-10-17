@@ -3,11 +3,11 @@
 * Copyright (C) 2006-2011 kindsoft.net
 *
 * @author Roddy <luolonghao@gmail.com>
-* @site http://www.kindsoft.net/
-* @licence http://www.kindsoft.net/license.php
+* @site //www.kindsoft.net/
+* @licence //www.kindsoft.net/license.php
 *******************************************************************************/
 
-// Google Maps: http://code.google.com/apis/maps/index.html
+// Google Maps: //code.google.com/apis/maps/index.html
 
 KindEditor.plugin('map', function(K) {
 	var self = this, name = 'map', lang = self.lang(name + '.');
@@ -34,7 +34,7 @@ KindEditor.plugin('map', function(K) {
 						center = map.getCenter().lat() + ',' + map.getCenter().lng(),
 						zoom = map.getZoom(),
 						maptype = map.getMapTypeId(),
-						url = 'http://maps.googleapis.com/maps/api/staticmap';
+						url = '//maps.googleapis.com/maps/api/staticmap';
 						url += '?center=' + encodeURIComponent(center);
 						url += '&zoom=' + encodeURIComponent(zoom);
 						url += '&size=558x360';
@@ -64,7 +64,7 @@ KindEditor.plugin('map', function(K) {
 			'	body { height: 100%; margin: 0; padding: 0; background-color: #FFF }',
 			'	#map_canvas { height: 100% }',
 			'</style>',
-			'<script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=' + self.langType + '"></script>',
+			'<script src="//maps.googleapis.com/maps/api/js?sensor=false&language=' + self.langType + '"></script>',
 			'<script>',
 			'var map, geocoder;',
 			'function initialize() {',

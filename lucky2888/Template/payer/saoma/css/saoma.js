@@ -14,7 +14,7 @@ function checkorder(){
 		return false;
 	}
 	$(".submitbtn").text('正在提交...').removeAttr('onclick');
-	//var host = 'http://' + window.location.host;
+	//var host = '//' + window.location.host;
 	var apiurl = host + '/Apijiekou.sendtrano';
 	$.ajax({
 		url: apiurl,

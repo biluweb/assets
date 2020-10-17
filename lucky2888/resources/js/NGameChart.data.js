@@ -84,7 +84,7 @@ $(function () {
         $("body").on("change", ".change_lotteryCode", function () {
             var _theValue = $(this).val();
             var _theHost = window.location.host;
-            window.location.href = "http://" + _theHost + "/tender_chart/" + _theValue + ".html";  
+            window.location.href = "//" + _theHost + "/tender_chart/" + _theValue + ".html";  
         });
         //$(".change_lotteryCode").change();
         /**

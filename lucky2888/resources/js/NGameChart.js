@@ -3326,7 +3326,7 @@
                 }
 
                 var LineStr = "<line x1='" + saveNum[0] + "' y1='" + saveNum[1] + "' x2='" + saveNum[2] + "' y2='" + saveNum[3] + "' style='stroke-width:2;stroke:#333;' />";
-                var _canvasObj = "<svg id='" + _cavans_id + "' width='" + _cavans_w + "px' height='" + _cavans_h + "px' version='1.1' xmlns='http://www.w3.org/2000/svg'>" + LineStr + "</svg>";
+                var _canvasObj = "<svg id='" + _cavans_id + "' width='" + _cavans_w + "px' height='" + _cavans_h + "px' version='1.1' xmlns='//www.w3.org/2000/svg'>" + LineStr + "</svg>";
                 Canvas_cont.append($(_canvasObj));
                 //计算位置 
                 var theLeft = start_pos.OffsetX < end_pos.OffsetX ? start_pos.OffsetX : end_pos.OffsetX;

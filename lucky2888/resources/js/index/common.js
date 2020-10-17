@@ -46,13 +46,13 @@ String.prototype.trim = function()
 }
 
 function rtrim(str, charlist) {
-    // http://kevin.vanzonneveld.net
-    // +   original by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+    // //kevin.vanzonneveld.net
+    // +   original by: Kevin van Zonneveld (//kevin.vanzonneveld.net)
     // +      input by: Erkekjetter
-    // +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+    // +   improved by: Kevin van Zonneveld (//kevin.vanzonneveld.net)
     // +   bugfixed by: Onno Marsman
     // +   input by: rem
-    // +   bugfixed by: Brett Zamir (http://brett-zamir.me)
+    // +   bugfixed by: Brett Zamir (//brett-zamir.me)
     // *     example 1: rtrim('    Kevin van Zonneveld    ');
     // *     returns 1: '    Kevin van Zonneveld'
     charlist = !charlist ? ' \\s\u00A0' : (charlist + '').replace(/([\[\]\(\)\.\?\/\*\{\}\+\$\^\:])/g, '\\$1');
@@ -233,15 +233,15 @@ function copyToClipboard(txt) {
 }
 
 function array_unique(inputArr) {
-    // http://kevin.vanzonneveld.net
-    // +   original by: Carlos R. L. Rodrigues (http://www.jsfromhell.com)
+    // //kevin.vanzonneveld.net
+    // +   original by: Carlos R. L. Rodrigues (//www.jsfromhell.com)
     // +      input by: duncan
-    // +   bugfixed by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+    // +   bugfixed by: Kevin van Zonneveld (//kevin.vanzonneveld.net)
     // +   bugfixed by: Nate
-    // +      input by: Brett Zamir (http://brett-zamir.me)
-    // +   bugfixed by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+    // +      input by: Brett Zamir (//brett-zamir.me)
+    // +   bugfixed by: Kevin van Zonneveld (//kevin.vanzonneveld.net)
     // +   improved by: Michael Grier
-    // +   bugfixed by: Brett Zamir (http://brett-zamir.me)
+    // +   bugfixed by: Brett Zamir (//brett-zamir.me)
     // %          note 1: The second argument, sort_flags is not implemented;
     // %          note 1: also should be sorted (asort?) first according to docs
     // *     example 1: array_unique(['Kevin','Kevin','van','Zonneveld','Kevin']);
@@ -277,27 +277,27 @@ function array_unique(inputArr) {
 }
 
 function number_format(number, decimals, dec_point, thousands_sep) {
-    // http://kevin.vanzonneveld.net
-    // +   original by: Jonas Raoni Soares Silva (http://www.jsfromhell.com)
-    // +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
-    // +     bugfix by: Michael White (http://getsprink.com)
+    // //kevin.vanzonneveld.net
+    // +   original by: Jonas Raoni Soares Silva (//www.jsfromhell.com)
+    // +   improved by: Kevin van Zonneveld (//kevin.vanzonneveld.net)
+    // +     bugfix by: Michael White (//getsprink.com)
     // +     bugfix by: Benjamin Lupton
-    // +     bugfix by: Allan Jensen (http://www.winternet.no)
-    // +    revised by: Jonas Raoni Soares Silva (http://www.jsfromhell.com)
+    // +     bugfix by: Allan Jensen (//www.winternet.no)
+    // +    revised by: Jonas Raoni Soares Silva (//www.jsfromhell.com)
     // +     bugfix by: Howard Yeend
-    // +    revised by: Luke Smith (http://lucassmith.name)
+    // +    revised by: Luke Smith (//lucassmith.name)
     // +     bugfix by: Diogo Resende
     // +     bugfix by: Rival
-    // +      input by: Kheang Hok Chin (http://www.distantia.ca/)
+    // +      input by: Kheang Hok Chin (//www.distantia.ca/)
     // +   improved by: davook
-    // +   improved by: Brett Zamir (http://brett-zamir.me)
+    // +   improved by: Brett Zamir (//brett-zamir.me)
     // +      input by: Jay Klehr
-    // +   improved by: Brett Zamir (http://brett-zamir.me)
-    // +      input by: Amir Habibi (http://www.residence-mixte.com/)
-    // +     bugfix by: Brett Zamir (http://brett-zamir.me)
+    // +   improved by: Brett Zamir (//brett-zamir.me)
+    // +      input by: Amir Habibi (//www.residence-mixte.com/)
+    // +     bugfix by: Brett Zamir (//brett-zamir.me)
     // +   improved by: Theriault
     // +      input by: Amirouche
-    // +   improved by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+    // +   improved by: Kevin van Zonneveld (//kevin.vanzonneveld.net)
     // *     example 1: number_format(1234.56);
     // *     returns 1: '1,235'
     // *     example 2: number_format(1234.56, 2, ',', ' ');
@@ -361,16 +361,16 @@ function toFixed (value, n) {
     return s;
 }
 function round(value, precision, mode) {
-    // http://kevin.vanzonneveld.net
+    // //kevin.vanzonneveld.net
     // +   original by: Philip Peterson
     // +    revised by: Onno Marsman
     // +      input by: Greenseed
     // +    revised by: T.Wild
     // +      input by: meo
     // +      input by: William
-    // +   bugfixed by: Brett Zamir (http://brett-zamir.me)
-    // +      input by: Josep Sanz (http://www.ws3.es/)
-    // +    revised by: Rafał Kukawski (http://blog.kukawski.pl/)
+    // +   bugfixed by: Brett Zamir (//brett-zamir.me)
+    // +      input by: Josep Sanz (//www.ws3.es/)
+    // +    revised by: Rafał Kukawski (//blog.kukawski.pl/)
     // %        note 1: Great work. Ideas for improvement:
     // %        note 1:  - code more compliant with developer guidelines
     // %        note 1:  - for implementing PHP constant arguments look at
@@ -414,10 +414,10 @@ function round(value, precision, mode) {
 }
 
 function str_repeat(input, multiplier) {
-    // http://kevin.vanzonneveld.net
-    // +   original by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
-    // +   improved by: Jonas Raoni Soares Silva (http://www.jsfromhell.com)
-    // +   improved by: Ian Carter (http://euona.com/)
+    // //kevin.vanzonneveld.net
+    // +   original by: Kevin van Zonneveld (//kevin.vanzonneveld.net)
+    // +   improved by: Jonas Raoni Soares Silva (//www.jsfromhell.com)
+    // +   improved by: Ian Carter (//euona.com/)
     // *     example 1: str_repeat('-=', 10);
     // *     returns 1: '-=-=-=-=-=-=-=-=-=-='
 
@@ -438,13 +438,13 @@ function str_repeat(input, multiplier) {
 }
 
 function is_numeric(mixed_var) {
-    // http://kevin.vanzonneveld.net
-    // +   original by: Kevin van Zonneveld (http://kevin.vanzonneveld.net)
+    // //kevin.vanzonneveld.net
+    // +   original by: Kevin van Zonneveld (//kevin.vanzonneveld.net)
     // +   improved by: David
     // +   improved by: taith
     // +   bugfixed by: Tim de Koning
-    // +   bugfixed by: WebDevHobo (http://webdevhobo.blogspot.com/)
-    // +   bugfixed by: Brett Zamir (http://brett-zamir.me)
+    // +   bugfixed by: WebDevHobo (//webdevhobo.blogspot.com/)
+    // +   bugfixed by: Brett Zamir (//brett-zamir.me)
     // *     example 1: is_numeric(186.31);
     // *     returns 1: true
     // *     example 2: is_numeric('Kevin van Zonneveld');

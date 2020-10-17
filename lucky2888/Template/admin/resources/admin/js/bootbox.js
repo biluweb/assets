@@ -1,7 +1,7 @@
 /**
  * bootbox.js [master branch]
  *
- * http://bootboxjs.com/license.txt
+ * //bootboxjs.com/license.txt
  */
 
 // @see https://github.com/makeusabrew/bootbox/issues/180
@@ -583,7 +583,7 @@
     if ($.fn.modal === undefined) {
       throw new Error(
         "$.fn.modal is not defined; please double check you have included " +
-        "the Bootstrap JavaScript library. See http://getbootstrap.com/javascript/ " +
+        "the Bootstrap JavaScript library. See //getbootstrap.com/javascript/ " +
         "for more details."
       );
     }

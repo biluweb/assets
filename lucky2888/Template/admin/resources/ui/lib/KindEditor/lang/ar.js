@@ -3,9 +3,9 @@
 * Copyright (C) 2006-2011 kindsoft.net
 *
 * @author Roddy <luolonghao@gmail.com>
-* @site http://www.kindsoft.net/
-* @licence http://www.kindsoft.net/license.php
-* Arabic Translation By daif alotaibi (http://daif.net/)
+* @site //www.kindsoft.net/
+* @licence //www.kindsoft.net/license.php
+* Arabic Translation By daif alotaibi (//daif.net/)
 *******************************************************************************/
 
 KindEditor.lang({

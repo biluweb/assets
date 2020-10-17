@@ -72,7 +72,7 @@
 		startServer = false,
 		args,
 		pick,
-		SVG_DOCTYPE = '<?xml version=\"1.0" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">',
+		SVG_DOCTYPE = '<?xml version=\"1.0" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">',
 		dpiCorrection = 1.4,
 		system = require('system'),
 		fs = require('fs'),
@@ -268,7 +268,7 @@
 			try {
 				if (outType.toLowerCase() === 'svg') {
 					// output svg
-					svg = svg.html.replace(/<svg /, '<svg xmlns:xlink="http://www.w3.org/1999/xlink" ').replace(/ href=/g, ' xlink:href=').replace(/<\/svg>.*?$/, '</svg>');
+					svg = svg.html.replace(/<svg /, '<svg xmlns:xlink="//www.w3.org/1999/xlink" ').replace(/ href=/g, ' xlink:href=').replace(/<\/svg>.*?$/, '</svg>');
 					// add xml doc type
 					svg = SVG_DOCTYPE + svg;
 

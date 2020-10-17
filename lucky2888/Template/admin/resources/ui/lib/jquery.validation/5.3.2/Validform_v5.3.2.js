@@ -2,7 +2,7 @@
     通用表单验证方法
     Validform version 5.3.2
 	By sean during April 7, 2010 - March 26, 2013
-	For more information, please visit http://validform.rjboy.cn
+	For more information, please visit //validform.rjboy.cn
 	Validform is available under the terms of the MIT license.
 	
 	Demo:

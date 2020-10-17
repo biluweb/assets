@@ -3,8 +3,8 @@
 * Copyright (C) 2006-2013 kindsoft.net
 *
 * @author Roddy <luolonghao@gmail.com>
-* @website http://www.kindsoft.net/
-* @licence http://www.kindsoft.net/license.php
+* @website //www.kindsoft.net/
+* @licence //www.kindsoft.net/license.php
 * @version 4.1.10 (2013-11-23)
 *******************************************************************************/
 (function (window, undefined) {
@@ -5674,7 +5674,7 @@ _plugin('core', function(K) {
 	self.clickToolbar('about', function() {
 		var html = '<div style="margin:20px;">' +
 			'<div>KindEditor ' + _VERSION + '</div>' +
-			'<div>Copyright &copy; <a href="http://www.kindsoft.net/" target="_blank">kindsoft.net</a> All rights reserved.</div>' +
+			'<div>Copyright &copy; <a href="//www.kindsoft.net/" target="_blank">kindsoft.net</a> All rights reserved.</div>' +
 			'</div>';
 		self.createDialog({
 			name : 'about',

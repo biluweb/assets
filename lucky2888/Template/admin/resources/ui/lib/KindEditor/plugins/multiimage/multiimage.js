@@ -3,8 +3,8 @@
 * Copyright (C) 2006-2011 kindsoft.net
 *
 * @author Roddy <luolonghao@gmail.com>
-* @site http://www.kindsoft.net/
-* @licence http://www.kindsoft.net/license.php
+* @site //www.kindsoft.net/
+* @licence //www.kindsoft.net/license.php
 *******************************************************************************/
 
 
@@ -295,15 +295,15 @@ KindEditor.plugin('multiimage', function(K) {
 
 
 /**
- * SWFUpload: http://www.swfupload.org, http://swfupload.googlecode.com
+ * SWFUpload: //www.swfupload.org, //swfupload.googlecode.com
  *
- * mmSWFUpload 1.0: Flash upload dialog - http://profandesign.se/swfupload/,  http://www.vinterwebb.se/
+ * mmSWFUpload 1.0: Flash upload dialog - //profandesign.se/swfupload/,  //www.vinterwebb.se/
  *
  * SWFUpload is (c) 2006-2007 Lars Huring, Olov Nilz閚 and Mammon Media and is released under the MIT License:
- * http://www.opensource.org/licenses/mit-license.php
+ * //www.opensource.org/licenses/mit-license.php
  *
  * SWFUpload 2 is (c) 2007-2008 Jake Roberts and is released under the MIT License:
- * http://www.opensource.org/licenses/mit-license.php
+ * //www.opensource.org/licenses/mit-license.php
  *
  */
 
@@ -523,9 +523,9 @@ SWFUpload.prototype.loadFlash = function () {
 
 // Private: getFlashHTML generates the object tag needed to embed the flash in to the document
 SWFUpload.prototype.getFlashHTML = function () {
-	// Flash Satay object syntax: http://www.alistapart.com/articles/flashsatay
+	// Flash Satay object syntax: //www.alistapart.com/articles/flashsatay
 	// Fix bug for IE9
-	// http://www.kindsoft.net/view.php?bbsid=7&postid=5825&pagenum=1
+	// //www.kindsoft.net/view.php?bbsid=7&postid=5825&pagenum=1
 	var classid = '';
 	if (KindEditor.IE && KindEditor.V > 8) {
 		classid = ' classid = "clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"';

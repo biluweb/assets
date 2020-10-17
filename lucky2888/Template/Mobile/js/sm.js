@@ -1,6 +1,6 @@
 /*!
  * =====================================================
- * SUI Mobile - http://m.sui.taobao.org/
+ * SUI Mobile - //m.sui.taobao.org/
  *
  * =====================================================
  */
@@ -925,7 +925,7 @@ Device/OS Detection
         }
 
         // If no for attribute exists, attempt to retrieve the first labellable descendant element
-        // the list of which is defined here: http://www.w3.org/TR/html5/forms.html#category-label
+        // the list of which is defined here: //www.w3.org/TR/html5/forms.html#category-label
         return labelElement.querySelector('button, input:not([type=hidden]), keygen, meter, output, progress, select, textarea');
     };
 
@@ -1231,7 +1231,7 @@ Device/OS Detection
         }
 
         // IE11: prefixed -ms-touch-action is no longer supported and it's recomended to use non-prefixed version
-        // http://msdn.microsoft.com/en-us/library/windows/apps/Hh767313.aspx
+        // //msdn.microsoft.com/en-us/library/windows/apps/Hh767313.aspx
         if (layer.style.touchAction === 'none' || layer.style.touchAction === 'manipulation') {
             return true;
         }
@@ -7008,7 +7008,7 @@ Device/OS Detection
          * 获取 url 的 fragment（即 hash 中去掉 # 的剩余部分）
          *
          * 如果没有则返回空字符串
-         * 如: http://example.com/path/?query=d#123 => 123
+         * 如: //example.com/path/?query=d#123 => 123
          *
          * @param {String} url url
          * @returns {String}
@@ -7020,12 +7020,12 @@ Device/OS Detection
         /**
          * 获取一个链接相对于当前页面的绝对地址形式
          *
-         * 假设当前页面是 http://a.com/b/c
+         * 假设当前页面是 //a.com/b/c
          * 那么有以下情况:
-         * d => http://a.com/b/d
-         * /e => http://a.com/e
-         * #1 => http://a.com/b/c#1
-         * http://b.com/f => http://b.com/f
+         * d => //a.com/b/d
+         * /e => //a.com/e
+         * #1 => //a.com/b/c#1
+         * //b.com/f => //b.com/f
          *
          * @param {String} url url
          * @returns {String}
@@ -8039,11 +8039,11 @@ Device/OS Detection
 
 /**
  * ScrollFix v0.1
- * http://www.joelambert.co.uk
+ * //www.joelambert.co.uk
  *
  * Copyright 2011, Joe Lambert.
  * Free to use under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
+ * //www.opensource.org/licenses/mit-license.php
  */
 /* ===============================================================================
 ************   ScrollFix   ************

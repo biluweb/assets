@@ -194,7 +194,7 @@ header .bar .button-link{
     color: #fff;
 }
 .dice{
-    background-image: url(http://imagess-google.com/system/common/dice/diceK3.png);
+    background-image: url(//imagess-google.com/system/common/dice/diceK3.png);
     display: inline-block;
     background-size: 200% 600%;
     vertical-align: middle;

@@ -1,7 +1,7 @@
 /*
 *	全国三级城市联动 js版
 *	author:		mrasong
-*	homepage:	http://asong.us/
+*	homepage:	//asong.us/
 *	E-mail:		mrasong#163.com
 *	version:	1.0.2
 *	data:		tencent

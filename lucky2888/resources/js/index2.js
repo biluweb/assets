@@ -509,7 +509,7 @@ $(document).ready(function () {
         var oHref_split_end = oHref_split[oHref_split.length - 1];
         var oHref_split_end2 = oHref_split_end.split("?");
         var theLocalURl = window.location.host;
-        var oIndex_link = "<a id='indexLink' href='http://" + theLocalURl + "/index.html' class='fl'>返回首页</a>";
+        var oIndex_link = "<a id='indexLink' href='//" + theLocalURl + "/index.html' class='fl'>返回首页</a>";
         if (oHref_split_end2.length > 0) {
             var oHref_split_end3 = oHref_split_end2[0];
         }
@@ -808,7 +808,7 @@ $(document).ready(function () {
 	        	    alert(aStrCode);
 	        	    var _localtionName = window.location.host == undefined ? '/index.html' : window.location.host;
 	        	    setTimeout(function () {
-	        	        window.location.href = "http://" + _localtionName + "/login.html";
+	        	        window.location.href = "//" + _localtionName + "/login.html";
 	        	    },2000)
 	        	    //window.open("forgetPaw7.html", "_self");
 	        	} else {
@@ -1177,18 +1177,18 @@ $(document).ready(function () {
 	    //console.log(_GetOpenMemberCode);
 	    if (_GetOpenMemberCode && _GetOpenMemberCodeId) {
 	        if (_GetOpenMemberCode != "null") {
-	            var _thrUrl = "http://" + window.location.host + "/rigest.html?id=" + _GetOpenMemberCodeId + "&text=" + _GetOpenMemberCode;
+	            var _thrUrl = "//" + window.location.host + "/rigest.html?id=" + _GetOpenMemberCodeId + "&text=" + _GetOpenMemberCode;
 	            $(".register_btn").attr("href", _thrUrl);
 	            $(".register_btn").addClass("haveurl");
 	        }
 	        else {
-	            var _thrUrl = "http://" + window.location.host + "/rigest1.html";
+	            var _thrUrl = "//" + window.location.host + "/rigest1.html";
 	            $(".register_btn").attr("href", _thrUrl);
 	            $(".register_btn").addClass("haveurl");
 	        }
 	    } else {
 	        //$(".register_btn").hide();
-	        var _thrUrl = "http://" + window.location.host + "/rigest1.html" ;
+	        var _thrUrl = "//" + window.location.host + "/rigest1.html" ;
 	        $(".register_btn").attr("href", _thrUrl);
 	        $(".register_btn").addClass("haveurl");
 	    }
@@ -1349,7 +1349,7 @@ window.onload=function(){
 * callBack：
 *************************/
 function ruiec_InsideLetter() {
-   var oUrl = "http://" + window.location.host + "/user_account_msg_letter.html";  
+   var oUrl = "//" + window.location.host + "/user_account_msg_letter.html";  
    $.ajax({
 	    type: "POST",
 	    url: oUrl,
@@ -1683,7 +1683,7 @@ function getQueryString(name) {
 function ruiec_showNotice() {
 
     //公告通知
-    var _theUrls = "http://" + window.location.host + "/user_account_msg_letter.html";
+    var _theUrls = "//" + window.location.host + "/user_account_msg_letter.html";
     $.ajax({
         type: "POST",
         url: _theUrls,

@@ -3,13 +3,13 @@ jQuery Tree Plugin ---- zTree
 last verson :  3.5.17
 
 
-**Donate to zTree** : http://www.ztree.me/v3/donate.php
+**Donate to zTree** : //www.ztree.me/v3/donate.php
 
 
-zTree API : http://www.ztree.me/v3/api.php
+zTree API : //www.ztree.me/v3/api.php
 
 
-zTree Demo : http://www.ztree.me/v3/demo.php
+zTree Demo : //www.ztree.me/v3/demo.php
 
 
 Introduction of zTree (简介)

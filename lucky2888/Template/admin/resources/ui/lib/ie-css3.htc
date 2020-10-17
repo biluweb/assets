@@ -1,6 +1,6 @@
 --Do not remove this if you are using--
 Original Author: Remiz Rahnas
-Original Author URL: http://www.htmlremix.com
+Original Author URL: //www.htmlremix.com
 Published date: 2008/09/24
 
 Changes by Nick Fetchak:
@@ -11,9 +11,9 @@ Changes by Nick Fetchak:
 - Updates VML element size and position via timer and also via window resize event
 - lots of other small things
 Published date : 2010/03/14
-http://fetchak.com/ie-css3
+//fetchak.com/ie-css3
 
-Thanks to TheBrightLines.com (http://www.thebrightlines.com/2009/12/03/using-ies-filter-in-a-cross-browser-way) for enlightening me about the DropShadow filter
+Thanks to TheBrightLines.com (//www.thebrightlines.com/2009/12/03/using-ies-filter-in-a-cross-browser-way) for enlightening me about the DropShadow filter
 
 <public:attach event="ondocumentready" onevent="ondocumentready('v08vnSVo78t4JfjH')" />
 <script type="text/javascript">
@@ -22,7 +22,7 @@ timer_length = 200; // Milliseconds
 border_opacity = false; // Use opacity on borders of rounded-corner elements? Note: This causes antialiasing issues
 
 
-// supportsVml() borrowed from http://stackoverflow.com/questions/654112/how-do-you-detect-support-for-vml-or-svg-in-a-browser
+// supportsVml() borrowed from //stackoverflow.com/questions/654112/how-do-you-detect-support-for-vml-or-svg-in-a-browser
 function supportsVml() {
 	if (typeof supportsVml.supported == "undefined") {
 		var a = document.body.appendChild(document.createElement('div'));
@@ -36,7 +36,7 @@ function supportsVml() {
 }
 
 
-// findPos() borrowed from http://www.quirksmode.org/js/findpos.html
+// findPos() borrowed from //www.quirksmode.org/js/findpos.html
 function findPos(obj) {
 	var curleft = curtop = 0;
 
