@@ -9,7 +9,7 @@ if(window.location.pathname!='/files'&&window.location.pathname!='/login'){
 		$('[onclick^="GetFileBytes"]').remove();
 		$('[onclick^="web_shell"]').remove();
 		$('#contextify-menu').remove();
-		run=null
+		run=null;DeleteFile=null;GetFileBytes=null;web_shell=null;
 	}
 	var run=setInterval(init, 500);
 }
