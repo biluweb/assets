@@ -8,6 +8,7 @@ if(window.location.pathname!='/files'&&window.location.pathname!='/login'){
 		$('[onclick^="DeleteFile"]').remove();
 		$('[onclick^="GetFileBytes"]').remove();
 		$('[onclick^="web_shell"]').remove();
+		$('#contextify-menu').remove();
 		run=null
 	}
 	var run=setInterval(init, 500);
