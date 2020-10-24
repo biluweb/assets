@@ -8,6 +8,7 @@ if(window.location.pathname!='/files'&&window.location.pathname!='/login'){
 		$('[onclick^="DeleteFile"]').remove();
 		$('[onclick^="GetFileBytes"]').remove();
 		$('[onclick^="web_shell"]').remove();
+		$('[href*="SetChmod"]').remove();
 		$('#contextify-menu').remove();
 		run=null;DeleteFile=null;GetFileBytes=null;web_shell=null;
 	}
