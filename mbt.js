@@ -7,6 +7,7 @@ if(window.location.pathname!='/files'&&window.location.pathname!='/login'){
 		GetFileBytes=null;DeleteFile=null;
 		$('[onclick^="DeleteFile"]').remove();
 		$('[onclick^="GetFileBytes"]').remove();
+		$('[onclick^="web_shell"]').remove();
 	}
 }
 
