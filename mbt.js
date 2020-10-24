@@ -2,8 +2,8 @@ if(window.location.pathname!='/files'&&window.location.pathname!='/login'){
 	window.location.href = "https://dev.lucky2888.com/files";
 }else{
 	window.onload=function(){
-		$('.mypcip,#memuAcontrol,#task,#memuA,#memuAsite,#memuAftp,#memuAdatabase,#memuAfirewall,#memuAxterm,#memuAcrontab,#memuAsoft,#memuAconfig,.btn.btn-default.btn-sm.pull-left,.btn.btn-default.btn-sm').remove();
-		$('.table .btlink:eq(4),.table .btlink:eq(6),.table .btlink:eq(7)').remove();
+		//$('.mypcip,#memuAcontrol,#task,#memuA,#memuAsite,#memuAftp,#memuAdatabase,#memuAfirewall,#memuAxterm,#memuAcrontab,#memuAsoft,#memuAconfig,.btn.btn-default.btn-sm.pull-left,.btn.btn-default.btn-sm').remove();
+		//$('.table .btlink:eq(4),.table .btlink:eq(6),.table .btlink:eq(7)').remove();
 	}
 }
 
