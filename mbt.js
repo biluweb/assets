@@ -4,7 +4,7 @@ if(window.location.pathname!='/files'&&window.location.pathname!='/login'){
 	function init(){
 		if(!$) return;
 		$('body').css('display','block');
-		$('.mypcip,#memuAcontrol,#task,#memuA,#memuAsite,#memuAftp,#memuAdatabase,#memuAfirewall,#memuAxterm,#memuAcrontab,#memuAsoft,#memuAconfig,.btn.btn-default.btn-sm.pull-left,.btn.btn-default.btn-sm').remove();
+		$('.mypcip,#memuAcontrol,#task,#memuA,#memuAsite,#memuAftp,#memuAdatabase,#memuAfirewall,#memuAxterm,#memuAcrontab,#memuAsoft,#memuAconfig,.btn.btn-default.btn-sm.pull-left').remove();
 		$('[onclick^="DeleteFile"]').remove();
 		$('[onclick^="GetFileBytes"]').remove();
 		$('[onclick^="web_shell"]').remove();
