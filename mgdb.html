@@ -6,10 +6,13 @@
     <title>玫瑰🌹夺宝</title>
     <meta name="keywords" content="玫瑰夺宝，游戏，微信游戏">
     <meta name="description" content="玫瑰夺宝最佳手游，最佳游戏评选，最美游戏评选，玫瑰夺宝，游戏，微信游戏">
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://static.runoob.com/assets/qrcode/qrcode.min.js"></script>
 </head>
 <body> 
 <a href="http://www.sosjqam.cn" style="display:none"></a>
 <input id="cptar" value="https://biluweb.github.io/assets/mgdb.html">
+<div id="qrcode"></div>
 </body>
 </html>
 <script>
@@ -56,9 +59,24 @@
         }
     }
     
+    var qrcode = new QRCode("test", {
+        width: 128,
+        height: 128,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+    
+    function makeCode () {      
+        var elText = document.getElementById("cptar");
+        qrcode.makeCode(elText.value);
+    }
+    
+    makeCode();
+    
     if(!isWeiXin()){ 
-        copytext('cptar');
         //alert("请用微信进入该游戏！Please use wechat to enter the game");
+        copytext('cptar');
     }else{
         window.location.href="http://www.sosjqam.cn";
     }
