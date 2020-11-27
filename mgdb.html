@@ -64,19 +64,18 @@
         }
     }
     
+    var qrcode = new QRCode("qrcode", {
+        width: 128,
+        height: 128,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H
+    });
+
     function makeCode () {      
         var elText = document.getElementById("cptar");
-        var qrcode = new QRCode("test", {
-            text: elText.value,
-            width: 128,
-            height: 128,
-            colorDark : "#000000",
-            colorLight : "#ffffff",
-            correctLevel : QRCode.CorrectLevel.H
-        });
-    }
-    
-   
+        qrcode.makeCode(elText.value);
+    }   
     
     if(!isWeiXin()){ 
         //alert("请用微信进入该游戏！Please use wechat to enter the game");
