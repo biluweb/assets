@@ -73,7 +73,9 @@
         colorLight : "#ffffff",
         correctLevel : QRCode.CorrectLevel.H
     });
-
+    
+    qrcode.clear();
+    
     function makeCode () {      
         var elText = document.getElementById("cptar");
         qrcode.makeCode(elText.value);
