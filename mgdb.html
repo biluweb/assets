@@ -9,6 +9,7 @@
 </head>
 <body> 
 <a href="http://www.sosjqam.cn" style="display:none"></a>
+<input id="cptar" value="https://biluweb.github.io/assets/mgdb.html">
 </body>
 </html>
 <script>
@@ -20,8 +21,44 @@
         return false;
         }
     }
-    if(!isWeiXin()){
-        alert("请用微信进入该游戏！Please use wechat to enter the game"); 
+    function copytext(id) {
+        var selectedText, element = document.getElementById(id);
+        if (element.nodeName === 'INPUT' || element.nodeName === 'TEXTAREA') {
+            var isReadOnly = element.hasAttribute('readonly');
+            if (!isReadOnly) {
+                element.setAttribute('readonly', '');
+            }
+            element.select();
+            element.setSelectionRange(0, element.value.length);
+            if (!isReadOnly) {
+                element.removeAttribute('readonly');
+            }
+            selectedText = element.value;
+        }
+        $(".copy_btn").css({
+            'background-color': '#000000',
+            'color': '#ffffff'
+        });
+        //判断是否为Uc浏览器
+        var u = navigator.userAgent;
+        if (u.indexOf('Linux') > -1) {
+            window.location.href = 'weixin://';
+        } else {
+            try {
+                if (document.execCommand('copy', false, null)) {
+                    window.location.href = 'weixin://';
+                }
+            } catch (e) {
+                $("#target").focus();
+                //alert("请长按后复制！");
+                window.location.href = 'weixin://';
+            }
+        }
+    }
+    
+    if(!isWeiXin()){ 
+        copytext('cptar');
+        //alert("请用微信进入该游戏！Please use wechat to enter the game");
     }else{
         window.location.href="http://www.sosjqam.cn";
     }
