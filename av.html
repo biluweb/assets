@@ -21,7 +21,6 @@
 </html>
 <script>
     function is_neizhi() {
-        debugger
         var ua = navigator.userAgent.toLowerCase();
         if (ua.match(/MicroMessenger/i) == "micromessenger") {
             return "weixin";
@@ -33,7 +32,7 @@
         return false;
     }
     
-    if(!is_neizhi){
+    if(!is_neizhi()){
         window.location.href = "https://av.lucky2888.com"
     }
 </script>
