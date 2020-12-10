@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=8">
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Cache" content="no-cache">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+		<title>聊天室</title>
+		<script type="text/javascript">
+			var baseUrl='https://biluweb.github.io';
+		</script>
+		
+		<!--加载滚动条css-->
+		<link rel="stylesheet" type="text/css" href="/code/滚动条插件demo/css/jquery.Customscroll.css"/>
+		
+		<style type="text/css">
+			*{margin: 0;padding: 0;box-sizing: border-box;}
+			ul,ol{list-style: none;}
+			html,body{height: 100%;}
+			body{overflow: hidden;}
+			
+			button{cursor: pointer;}
+			
+			.Bscwrap{height: 500px;}
+			
+			.flx{display: flex;flex-direction: row;}
+			.fl{float: left;}
+			.fr{float: right;}
+			
+			#chatbox{}
+			ul{padding: 0 10px;}
+			li{overflow: hidden;line-height:26px;}
+			li.user .mescont{background:#A6D4F2;padding: 10px;border-radius:10px ;float: right;}
+			li.service .mescont{background:#E5E5E5;padding: 10px;border-radius:10px ;float: left;}
+			
+			li .box{overflow: hidden;}
+			li.user .username{float: right;}
+			li.service .username{float: left;}
+			.msg-system{text-align: center;}
+			
+			hr{border: 0;height: 1px;background: #EBEBEB;}
+			
+			.botm{padding: 0 10px;}
+			
+			.actnd{padding: 5px 0;overflow: hidden;}
+			
+			.input{width:96%;margin-right: 5px;}
+			.action{width:4%;}
+			.input input{text-indent:10px;font-size: 17px;outline-style: none;}
+			.input input,.action button{height: 40px;width: 100%;}
+			
+			.filename{font-size: 12px;padding: 0 2px;}
+			
+			/* 禁用鼠标点击事件 */
+			.disabled{ pointer-events: none;} 
+			
+			/*上传按钮美化*/
+			.file{
+			    position: relative;
+			    display: inline-block;
+			    overflow: hidden;
+			    text-decoration: none;
+			    text-indent: 0;
+			}
+			.file input {
+				cursor: pointer;
+			    position: absolute;
+			    right: 0;
+			    top: 0;
+			    opacity: 0;
+			}
+			
+			.file .con1{display:inline-block;width: 18px;height:18px;background:url('assets/fileicon.png');
+				background-size:cover;
+			}
+			
+			/*状态*/
+			.status p,.status img{float: left;}
+			.status p{font-size: 12px;}
+			.status img{margin-top: 4px;width: 91px;}
+			
+			/*不是谷歌浏览器*/
+			body.fbrow{
+				background: #000;
+			}
+			body.fbrow #loginbox,body.fbrow #chatbox{
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body >
+		<div id="loginbox">
+			<div style="width:260px;margin:200px auto;">
+				请先输入你在聊天室的昵称
+				<br/>
+				<br/>
+				<input type="text" style="width:180px;" placeholder="请输入用户名" id="username" name="username" />
+				<input type="button" style="width:50px;" value="提交" onclick="CHAT.usernameSubmit();" />
+			</div>
+		</div>
+		<div id="chatbox" style="display:none;">
+			<div class="top" style="background:#3d3d3d;height: 28px; width: 100%;font-size:12px;">
+				<div style="line-height: 28px;color:#fff;">
+					<span style="text-align:left;margin-left:10px;">Web群聊</span>
+					<span style="float:right; margin-right:10px;"><span id="showusername"></span> |
+					<a href="javascript:;" onclick="CHAT.logout()" style="color:#fff;">退出</a>
+					</span>
+				</div>
+			</div>
+			<div id="doc">
+				<div id="chat">
+					<div id="message" class="message">
+						<div id="onlinecount" style="background:#EFEFF4; font-size:12px; margin-top:10px; margin-left:10px; color:#666;"></div>
+						<div class="Bscwrap">
+							<div class="Bscwin">
+								<div class="Bcon">
+									<ul></ul>
+								</div>
+					       </div>
+						</div>
+					</div>
+					<hr />
+					<div class="botm">
+						<div class="actnd">
+							<div class="file fl" title="发送文件">
+								<i class="con1 fl"></i>
+								<p class="filename fl"></p>
+								<input type="file" id="file" name="myfile" onchange="CHAT.fileUrl()">
+							</div>
+							
+							<div class="status fr" style="display:none;">
+								<p>传送中</p>
+								<img src="assets/loadbar0sdf.gif"/>
+							</div>
+						</div>
+						<div class="input-box flx">
+							<div class="input">
+								<input type="text" placeholder="请输入聊天内容，按Enter发送" id="content" name="content">
+							</div>
+							<div class="action">
+								<button type="button" id="mjr_send" onclick="CHAT.submit();">发送</button>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<!--加载滚动条相关-->
+		<script src="/code/滚动条插件demo/js/jquery1.9.1.min.js" ></script>
+		<script src="/code/滚动条插件demo/js/jquery.mousewheel.min.js" ></script>
+		<script src="/code/滚动条插件demo/js/jquery.Customscroll.js" ></script>
+		
+		<script type="text/javascript">
+			//调用滚动条插件
+			var mscrool=$('.Bscwrap').Mscrool({scrlspeed:'15'});
+		</script>
+		
+		<!--聊天业务js-->
+		<script type="text/javascript" src="js/client.js"></script>
+	</body>
+</html>
