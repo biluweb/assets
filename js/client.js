@@ -45,6 +45,7 @@
 		},
 		chrome:function(){
 			this.userAgent =navigator.userAgent;
+			return true
 			if(this.userAgent.indexOf("Chrome")>-1){
 				return true;
 			}else{
