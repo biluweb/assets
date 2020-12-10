@@ -217,7 +217,7 @@
 							txt: content,
 						}
 					};
-					self.socket.emit('message', obj);
+					self.socket.send(obj);
 					obj=null;
 					if(content){
 						d.getElementById("content").value = '';
@@ -353,32 +353,36 @@
 			
 			//连接websocket后端服务器
 			this.socket = new WebSocket(ws);
+			
+			this.socket.onopen = function(){console.log('ws 成功链接')  };
 
 			//tell socket.io to never give up :)
-			this.socket.on('error', function(exception){
+			this.socket.onerror = function(exception){
 				console.log("Error occ");
 				console.log(exception);
 				self.socket.connect();
-			});
+			};
 
 			//告诉服务器端有用户登录
-			this.socket.emit('login', {
-				userid: this.userid,
-				username: this.username
-			});
+// 			this.socket.emit('login', {
+// 				userid: this.userid,
+// 				username: this.username
+// 			});
 
 			//监听新用户登录
-			this.socket.on('login', function(o) {
-				CHAT.updateSysMsg(o, 'login');
-			});
+// 			this.socket.on('login', function(o) {
+// 				CHAT.updateSysMsg(o, 'login');
+// 			});
 
 			//监听用户退出
-			this.socket.on('logout', function(o){
-				CHAT.updateSysMsg(o, 'logout');
-			});
+// 			this.socket.on('logout', function(o){
+// 				CHAT.updateSysMsg(o, 'logout');
+// 			});
 
 			//监听消息发送
-			this.socket.on('message', function(obj){		
+			
+			
+			this.socket.onmessage = function(obj){		
 				var obj=obj;
 				var isme = (obj.userid == CHAT.userid) ? true : false;
 				var usernameDiv = '<div class=\'box\'><span class=\'username\'>用户' + obj.username + '</span></div>';
@@ -449,17 +453,17 @@
 
 				}	
 				return false;
-			});
+			};
 
-			this.socket.on("reconnecting", function(delay, attempt){
-				if(delay){
-					//告诉服务器端有用户登录
-					self.socket.emit('login', {
-						userid: self.userid,
-						username: self.username
-					});
-				}
-			});
+// 			this.socket.on("reconnecting", function(delay, attempt){
+// 				if(delay){
+// 					//告诉服务器端有用户登录
+// 					self.socket.emit('login', {
+// 						userid: self.userid,
+// 						username: self.username
+// 					});
+// 				}
+// 			});
 		}
 	};
 	//通过“回车”提交用户名
