@@ -382,8 +382,8 @@
 			//监听消息发送
 			
 			
-			this.socket.onmessage = function(d){
-				var obj=JSON.parse(d.data);
+			this.socket.onmessage = function(obj){
+				var obj=JSON.parse(obj.data);
 				var isme = (obj.userid == CHAT.userid) ? true : false;
 				var usernameDiv = '<div class=\'box\'><span class=\'username\'>用户' + obj.username + '</span></div>';
 				var li = d.createElement('li');
