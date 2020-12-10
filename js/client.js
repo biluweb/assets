@@ -383,7 +383,7 @@
 			
 			
 			this.socket.onmessage = function(obj){		
-				var obj=obj;
+				var obj=obj.data;
 				var isme = (obj.userid == CHAT.userid) ? true : false;
 				var usernameDiv = '<div class=\'box\'><span class=\'username\'>用户' + obj.username + '</span></div>';
 				var li = d.createElement('li');
