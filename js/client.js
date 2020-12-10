@@ -118,7 +118,7 @@
 						txt: content
 					}
 				};
-				self.socket.emit('message', obj);
+				self.socket.send(obj);
 				obj=null;content=null;fileObj=null;
 				d.getElementById("content").value = '';
 			}
