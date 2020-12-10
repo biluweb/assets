@@ -11,7 +11,7 @@
 
 	//api
 	var ip='https://'+baseUrl,
-		ws='wss://echo.websocket.org',
+		ws='wss://socket.lucky2888.com',
 		pr1=':3100',
 		pr2=':4100',
 		uplod=ip+pr1+'/file/uploading',//上传文件
