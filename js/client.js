@@ -352,14 +352,7 @@
 			
 			
 			//连接websocket后端服务器
-			this.socket = io.connect(ws, {
-				//'path': '/chat-connector',
-				'forceNew': true,
-				'reconnection': true,
-				'reconnectionDelay': 1000,
-				'reconnectionDelayMax': 5000,
-				'reconnectionAttempts': 5
-			});
+			this.socket = new WebSocket(ws);
 
 			//tell socket.io to never give up :)
 			this.socket.on('error', function(exception){
