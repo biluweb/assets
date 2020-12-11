@@ -258,7 +258,7 @@
 			//添加系统消息
 			var html = '';
 			html += '<div class="msg-system">';
-			html += '用户' + user.username;
+			html += user.username;
 			html += (action == 'login') ? ' 加入了聊天室' : ' 退出了聊天室';
 			html += '</div>';
 			var dv = d.createElement('div');
