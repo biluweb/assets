@@ -40,7 +40,7 @@
 			this.toph=CHAT.topm.clientHeight;
 			this.onlih=CHAT.ontm.clientHeight;
 			this.btmh=CHAT.botm.clientHeight;
-			this.chath=this.vih-this.toph-this.btmh-this.onlih-20-20;
+			this.chath=this.vih-this.toph-this.btmh-this.onlih-30-30;
 			CHAT.scrol.setAttribute('style','height:'+this.chath+'px');
 		},
 		chrome:function(){
@@ -218,7 +218,8 @@
 							txt: content,
 						}
 					};
-					self.socket.send(obj);
+					//self.socket.send(obj);
+					self.socket.emit('message', obj);
 					obj=null;
 					if(content){
 						d.getElementById("content").value = '';
