@@ -40,7 +40,7 @@
 			this.toph=CHAT.topm.clientHeight;
 			this.onlih=CHAT.ontm.clientHeight;
 			this.btmh=CHAT.botm.clientHeight;
-			this.chath=this.vih-this.toph-this.btmh-this.onlih-20-60;
+			this.chath=this.vih-this.toph-this.btmh-this.onlih-20-20;
 			CHAT.scrol.setAttribute('style','height:'+this.chath+'px');
 		},
 		chrome:function(){
