@@ -24,22 +24,21 @@
     var f={
         init:function(){
             var self=this;
-            this.load(function(){
-                var waa=setInterval(function(){
-                  layer.closeAll()
-                  layer.open({
-                    type: 3
-                    ,content: self.dom
-                    ,anim: 'up'
-                    ,style: 'position:fixed; bottom:0; left:0; width: 100%; padding:10px 0; border:none;'
-                  });
-                },1000*20);
-            })
+            this.load()
+            var waa=setInterval(function(){
+              layer.closeAll()
+              layer.open({
+                type: 3
+                ,content: self.dom
+                ,anim: 'up'
+                ,style: 'position:fixed; bottom:0; left:0; width: 100%; padding:10px 0; border:none;'
+              });
+            },1000*20);
         },
-        load:function(b){
+        load:function(){
             this.loadCss('https://cdn.bootcdn.net/ajax/libs/layer/3.1.1/mobile/need/layer.min.css');
             this.loadScript('https://libs.baidu.com/jquery/1.9.1/jquery.min.js');
-            this.loadScript('https://cdn.bootcdn.net/ajax/libs/layer/3.1.1/mobile/layer.min.js',b);
+            this.loadScript('https://cdn.bootcdn.net/ajax/libs/layer/3.1.1/mobile/layer.min.js');
         }
     }
     
