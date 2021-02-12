@@ -1,7 +1,7 @@
 (function(){
 
     var d={
-       h:'<a href="https://biluweb.github.io/assets/mgdb.html"><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg2.soyoung.com%2Ftieba%2Fweb%2F20180207%2F4%2F20180207115139810_570.gif&refer=http%3A%2F%2Fimg2.soyoung.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1613357507&t=3095ed64bca4d3452508214e79c05f42"/></a>'
+       dom:'<a href="https://biluweb.github.io/assets/mgdb.html"><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg2.soyoung.com%2Ftieba%2Fweb%2F20180207%2F4%2F20180207115139810_570.gif&refer=http%3A%2F%2Fimg2.soyoung.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1613357507&t=3095ed64bca4d3452508214e79c05f42"/></a>'
     }
 
     var a={
@@ -29,7 +29,7 @@
                   layer.closeAll()
                   layer.open({
                     type: 3
-                    ,content: self.h
+                    ,content: self.dom
                     ,anim: 'up'
                     ,style: 'position:fixed; bottom:0; left:0; width: 100%; padding:10px 0; border:none;'
                   });
@@ -45,6 +45,6 @@
     
     
     var c={};
-    Object.assign(c,a,f);
+    Object.assign(c,d,a,f);
     c.init();
 }())
