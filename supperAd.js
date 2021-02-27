@@ -45,5 +45,7 @@
     
     var c={};
     Object.assign(c,d,a,f);
-    c.init();
+    window.onload=function(){
+        c.init();    
+    }
 }())
