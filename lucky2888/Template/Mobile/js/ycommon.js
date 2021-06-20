@@ -31,7 +31,7 @@ define(['jquery'],function (jquery){
                 $aLi.eq(1).find('.bottom_navbar_list').addClass('active');
             }else if(activeName == 'index.open.do'){
                 $aLi.eq(2).find('.bottom_navbar_list').addClass('active');
-            }else if(activeName == 'index.youhui.do'){
+            }else if(activeName == 'activity.index.do'){
                 $aLi.eq(3).find('.bottom_navbar_list').addClass('active');
             }else if(activeName == 'member.index.do' || activeName == 'index.user.do'){
                 $aLi.eq(4).find('.bottom_navbar_list').addClass('active');
@@ -39,5 +39,6 @@ define(['jquery'],function (jquery){
                 $aLi.eq(0).find('.bottom_navbar_list').addClass('active');
 			}
 		}
+		
 	}
 })
