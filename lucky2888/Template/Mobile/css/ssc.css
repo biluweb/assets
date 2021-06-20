@@ -472,7 +472,7 @@ body{
 }
 .selectMultiple{
   position: fixed;
-  bottom:55px;
+  bottom:0px;
   left: 0;
   width: 100%;
 }
@@ -836,7 +836,7 @@ body{
 }
 
 .lottery_footer{
-    bottom:120px;
+    bottom:62px;
     width: 100%;
     height: auto;
     position: fixed;
