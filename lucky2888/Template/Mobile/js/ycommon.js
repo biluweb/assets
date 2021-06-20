@@ -27,13 +27,13 @@ define(['jquery'],function (jquery){
 				$aLi.eq(0).find('.bottom_navbar_list').addClass('active');
 			}
 			 **/
-            if(activeName == 'Index.hall.do'){
+            if(activeName == 'index.hall.do'){
                 $aLi.eq(1).find('.bottom_navbar_list').addClass('active');
-            }else if(activeName == 'Index.open.do'){
+            }else if(activeName == 'index.open.do'){
                 $aLi.eq(2).find('.bottom_navbar_list').addClass('active');
-            }else if(activeName == 'Index.youhui.do'){
+            }else if(activeName == 'index.youhui.do'){
                 $aLi.eq(3).find('.bottom_navbar_list').addClass('active');
-            }else if(activeName == 'Member.index.do' || activeName == 'Index.user.do'){
+            }else if(activeName == 'member.index.do' || activeName == 'index.user.do'){
                 $aLi.eq(4).find('.bottom_navbar_list').addClass('active');
             }else{
                 $aLi.eq(0).find('.bottom_navbar_list').addClass('active');
