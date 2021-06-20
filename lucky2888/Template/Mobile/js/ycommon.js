@@ -31,7 +31,7 @@ define(['jquery'],function (jquery){
                 $aLi.eq(1).find('.bottom_navbar_list').addClass('active');
             }else if(activeName == 'index.open.do'){
                 $aLi.eq(2).find('.bottom_navbar_list').addClass('active');
-            }else if(activeName == 'activity.index.do'){
+            }else if(activeName == 'activity.index.do'||activeName == 'activity.promotion.do'||activeName=='activity.everydayplus.do'){
                 $aLi.eq(3).find('.bottom_navbar_list').addClass('active');
             }else if(activeName == 'member.index.do' || activeName == 'index.user.do'){
                 $aLi.eq(4).find('.bottom_navbar_list').addClass('active');
