@@ -3,5 +3,6 @@ window.onload=function(){
     if($('#sitetips,#fk_faiVisitStateAd').length){
         $('#sitetips,#fk_faiVisitStateAd').remove();
     }
-  },1000);
+  },500);
+  $('.s_footer p').eq(1).remove();
 }
