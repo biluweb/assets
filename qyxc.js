@@ -1,3 +1,7 @@
 window.onload=function(){
-  $('#sitetips,#fk_faiVisitStateAd').remove();
+  setInterval(function(){
+    if($('#sitetips,#fk_faiVisitStateAd').length){
+        $('#sitetips,#fk_faiVisitStateAd').remove();
+    }
+  },1000);
 }
