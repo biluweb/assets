@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 Disallow: /admin/
-Sitemap: https://biluweb.github.io/assets/qyxc/sitemap.xml
+Sitemap: https://www.qyxchen.cn/sitemap.xml
