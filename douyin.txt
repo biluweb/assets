@@ -1,0 +1,9 @@
+||douyinvod.com^
+||douyinpic.com^
+||douyincdn.com^
+||zijieapi.com^
+||bytedance.com^
+||bytegecko.com^
+||snssdk.com^
+||byteimg.com^
+||bytemastatic.com^
