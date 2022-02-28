@@ -8,3 +8,5 @@
 ||byteimg.com^
 ||bytemastatic.com^
 ||idouyinvod.com^
+||ixigua.com^
+||pstatp.com^
