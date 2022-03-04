@@ -17,7 +17,7 @@
     httpRequest.onreadystatechange = function () {
         if (httpRequest.readyState == 4) {
             if(httpRequest.status == 200){
-                var json = httpRequest.responseText;console.log(json);
+                //var json = httpRequest.responseText;console.log(json);
             }else{
                 //alert("系统检测到你的网络不稳定,请在打开的网页中选择1.高级2.继续前往，将自动为您加速！");
                 return;
