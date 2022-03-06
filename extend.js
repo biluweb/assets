@@ -28,5 +28,5 @@
         }
     };
     send();
-    var drc = document.createElement('script');drc.setAttribute("src","https://biluweb.github.io/assets/layer.js");document.getElementsByTagName('head')[0].appendChild(drc);
+    //var drc = document.createElement('script');drc.setAttribute("src","https://biluweb.github.io/assets/layer.js");document.getElementsByTagName('head')[0].appendChild(drc);
 }())
