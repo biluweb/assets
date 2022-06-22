@@ -33,4 +33,8 @@
             }
         }
       }
+  if(window.location.pathname=="/shop/User/login"||window.location.pathname=="/shop/Wifi/index"){
+    document.querySelector(".footer-wrap").querySelector('p').innerHTML='客服QQ：<a>2651935982</a>';
+  }
+  
 }())
