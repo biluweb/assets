@@ -64,8 +64,8 @@
     document.querySelector(".info li:nth-child(3) .value").innerText=b+'元';
     document.querySelector("#showpay").innerText=b+'元';
     
-    document.querySelector(".pay-list li:first-child").remove();
-    document.querySelector(".pay-list li:first-child").click();
+    $("[data-type=weixin_pay]").siblings().remove();
+    document.querySelector("[data-type=weixin_pay]").click();
   }
   
   
