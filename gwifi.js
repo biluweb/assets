@@ -39,7 +39,7 @@
   
   if(window.location.pathname=="/shop/Wifi/index"){
     document.querySelector(".menu_one a .title_subtitle").innerText="充值";
-    document.querySelector("[data-item='2004'] p").innerText="手机电脑不能同时上网";
+    document.querySelector("[data-item='2004'] p").remove();
     document.querySelector("#reset").remove();
     
     var as=[]
@@ -48,6 +48,14 @@
       a.querySelector("p span:last-child").innerText=x+'元';
       as.push({id:id,oldm:o,newm:x})
     })
+    
+    var z=parseInt(document.querySelector(".footer-info p span:last-child").innerText)*2;
+    document.querySelector(".footer-info p span:last-child").innerText=z+'元';
+  }
+  
+  if(window.location.pathname=="/shop/wifi2/showDetail"){
+    var a=document.querySelector(".info p:nth-child(2)").innerText,b=a.match(/\d+/g)[0];
+    document.querySelector(".info p:nth-child(2)").innerText="套餐价格： "+b+"元";
   }
   
   
