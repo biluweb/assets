@@ -3,7 +3,7 @@
         document.querySelector(".main_footer_msg").innerText="客服QQ：2651935982";
         
         //login
-        window.doFailedLogin=function doFailedLogin(c, div) {
+        window.doFailedLogin=function(c, div) {
             if (c.data.reasoncode == "32") {
                 resetpage();
                 var name = $('#first_name').val();
