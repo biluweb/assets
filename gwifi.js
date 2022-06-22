@@ -58,5 +58,12 @@
     document.querySelector(".info p:nth-child(2)").innerText="套餐价格： "+b+"元";
   }
   
+  if(window.location.pathname=="/shop/wifi/do_charge"){
+    var a=document.querySelector(".info li:nth-child(2) .value").innerText,b=parseInt(a)*2;
+    document.querySelector(".info li:nth-child(2) .value").innerText=a.replace(/\d+/,b)
+    document.querySelector(".info li:nth-child(3) .value").innerText=b+'元';
+    document.querySelector("#showpay").innerText=b+'元';
+  }
+  
   
 }())
