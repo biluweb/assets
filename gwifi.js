@@ -33,8 +33,14 @@
             }
         }
       }
+  
+  var g=document.querySelector(".footer-wrap");
+  if(g){
+    g.querySelector('p').innerHTML='客服QQ：<a>2651935982</a>';
+  }
+  
   if(window.location.pathname=="/shop/User/login"||window.location.pathname=="/shop/Wifi/index"){
-    document.querySelector(".footer-wrap").querySelector('p').innerHTML='客服QQ：<a>2651935982</a>';
+    //document.querySelector(".footer-wrap").querySelector('p').innerHTML='客服QQ：<a>2651935982</a>';
   }
   
   if(window.location.pathname=="/shop/Wifi/index"){
@@ -66,6 +72,12 @@
     
     $("[data-type=weixin_pay]").siblings().remove();
     document.querySelector("[data-type=weixin_pay]").click();
+    
+    var b=document.querySelector(".list_msg li:nth-child(2) span").innerText,c=parseInt(b)*2;
+    document.querySelector(".list_msg li:nth-child(2) span").innerText=b.replace(/\d+/,c);
+    document.querySelector("#total_fee").innerText=c;
+    $("#weixin_pay_area").click().siblings().remove();
+    
   }
   
   
