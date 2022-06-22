@@ -37,4 +37,18 @@
     document.querySelector(".footer-wrap").querySelector('p').innerHTML='客服QQ：<a>2651935982</a>';
   }
   
+  if(window.location.pathname=="/shop/Wifi/index"){
+    document.querySelector(".menu_one a .title_subtitle").innerText="充值";
+    document.querySelector("[data-item='2004'] p").innerText="手机电脑不能同时上网";
+    document.querySelector("#reset").remove();
+    
+    var as=[]
+    document.querySelectorAll("[data-item]").forEach(function(a){
+      var m=a.querySelector("p span:last-child").innerText,o=parseInt(m),x=o*2,id=a.getAttribute("data-item");
+      a.querySelector("p span:last-child").innerText=x+'元';
+      as.push({id:id,oldm:o,newm:x})
+    })
+  }
+  
+  
 }())
