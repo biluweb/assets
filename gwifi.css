@@ -1,2 +1,2 @@
-.menu_one>a:nth-child(2),.menu_one>a:nth-child(3),.menu_one>a:nth-child(4){display:none;}
+.menu_one>a:nth-child(2),.menu_one>a:nth-child(3),.menu_one>a:nth-child(4),.content-right .oprice{display:none;}
 .con_menu .menu_two{visibility:hidden;}
