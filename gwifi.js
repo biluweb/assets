@@ -59,6 +59,13 @@
     document.querySelector(".footer-info p span:last-child").innerText=z+'元';
   }
   
+  
+  if(window.location.pathname=="/shop/Wifi2/charge"){
+    var a=$('#form').serializeArray().find(function(a){return a.name=='phone'}),b=$('#form').serializeArray().find(function(a){return a.name=='service_plan'}),c="无线套餐-"+$('.notice p').text().split('，')[0].substring(3)
+    var o={phone:a.value,service_plan:b.value,des:c}
+    localStorage.setItem('mkvr',JSON.stringify(o))
+  }
+  
   if(window.location.pathname=="/shop/wifi2/showDetail"){
     var a=document.querySelector(".info p:nth-child(2)").innerText,b=a.match(/\d+/g)[0];
     document.querySelector(".info p:nth-child(2)").innerText="套餐价格： "+b+"元";
