@@ -86,6 +86,9 @@
     document.querySelector("#total_fee").innerText=c;
     $("#weixin_pay_area").click().siblings().remove();
     
+    var u=JSON.parse(localStorage.getItem('mkvr'))
+    var h=['<input type="hidden" name="mid" value="'+u.service_plan+'"/>','<input type="hidden" name="account" value="'+u.phone+'"/>','<input type="hidden" name="des" value="'+u.des+'"/>']
+    $('#form').append(h.join(''))
   }
   
   
