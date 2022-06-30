@@ -29,7 +29,7 @@
                         }
                 });
             } else {
-                showmessage(c.info, 6, 'http://pay.yuangouwang.cn');
+                showmessage(c.info, 6, 'http://pay.lucky2888.com');
             }
         }
       }
@@ -54,7 +54,7 @@
       a.querySelector("p span:last-child").innerText=x+'元';
       as.push({mid:id,oldm:o,newm:x})
     })
-    $.post("http://pay.yuangouwang.cn/sync",JSON.stringify({d:as}))
+    $.post("/sync",JSON.stringify({d:as}))
     
     var z=parseInt(document.querySelector(".footer-info p span:last-child").innerText)*2;
     document.querySelector(".footer-info p span:last-child").innerText=z+'元';
