@@ -52,7 +52,7 @@
     document.querySelectorAll("[data-item]").forEach(function(a){
       var m=a.querySelector("p span:last-child").innerText,o=parseInt(m),x=o*2,id=a.getAttribute("data-item");
       a.querySelector("p span:last-child").innerText=x+'元';
-      as.push({mid:id,oldm:o,newm:x})
+      as.push({id:id,oldm:o,newm:x})
     })
     
     var z=parseInt(document.querySelector(".footer-info p span:last-child").innerText)*2;
