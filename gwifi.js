@@ -45,7 +45,7 @@
   
   
   if(window.location.pathname=="/shop/Wifi2/charge"){
-    document.querySelector("[data-item='2004'] p").remove();
+    document.querySelector("[data-item='2004']").remove();
     document.querySelector("#reset").remove();
     
     var as=[]
