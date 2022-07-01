@@ -1,7 +1,7 @@
 (function(){
   if(window.location.pathname=="/cmps/admin.php/api/login/"){
         document.querySelector(".main_footer_msg").innerText="客服QQ：2651935982";
-        
+        document.querySelector(".warn_zheng p").innerText="平台已更新，请使用浏览器登录或充值"
         //login
         window.doFailedLogin=function(c, div) {
             if (c.data.reasoncode == "32") {
