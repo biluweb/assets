@@ -39,10 +39,6 @@
     g.querySelector('p').innerHTML='客服QQ：<a>2651935982</a>';
   }
   
-  if(window.location.pathname=="/shop/User/login"||window.location.pathname=="/shop/Wifi/index"){
-    //document.querySelector(".footer-wrap").querySelector('p').innerHTML='客服QQ：<a>2651935982</a>';
-  }
-  
   if(window.location.pathname=="/shop/Wifi/index"){
     document.querySelector(".menu_one a .title_subtitle").innerText="充值";
   }
