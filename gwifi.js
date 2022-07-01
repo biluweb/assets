@@ -65,7 +65,7 @@
   
   if(window.location.pathname=="/shop/wifi2/showDetail"){
     var a=document.querySelector(".info p:nth-child(2)").innerText,b=a.match(/\d+/g)[0];
-    document.querySelector(".info p:nth-child(2)").innerText="套餐价格： "+b+"元";
+    document.querySelector(".info p:nth-child(2)").innerText="套餐价格： "+(b*2)+"元";
   }
   
   if(window.location.pathname=="/shop/wifi/do_charge"){
