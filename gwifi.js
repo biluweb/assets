@@ -49,11 +49,11 @@
       document.querySelector("[data-item='2004']").remove();
       document.querySelector("#reset").remove();
       document.querySelectorAll("[data-item]").forEach(function(a){
-        var m=a.querySelector("p span:last-child").innerText,o=parseInt(m),x=o*2,id=a.getAttribute("data-item");
+      var m=a.querySelector("p span:last-child").innerText,o=parseInt(m),x=o*2,id=a.getAttribute("data-item");
         a.querySelector("p span:last-child").innerText=x+'元';
         as.push({mid:id,oldm:o,newm:x})
       })
-      $.post("/sync",JSON.stringify({d:as}))
+      $.ajax({url:'/sync',type:'post',contentType: 'application/json',data:JSON.stringify({d:as})),cache:false});
       
       var kk=document.querySelector(".footer-info p span:last-child")
       if(kk){var z=parseInt(document.querySelector(".footer-info p span:last-child").innerText)*2;document.querySelector(".footer-info p span:last-child").innerText=z+'元';}
