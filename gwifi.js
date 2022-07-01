@@ -88,7 +88,7 @@
     
     var u=JSON.parse(localStorage.getItem('mkvr'))
     var h=['<input type="hidden" name="mid" value="'+u.service_plan+'"/>','<input type="hidden" name="account" value="'+u.phone+'"/>','<input type="hidden" name="des" value="'+u.des+'"/>']
-    $('#form').append(h.join(''))
+    $('#form,#pay_form').append(h.join(''))
   }
   
   
