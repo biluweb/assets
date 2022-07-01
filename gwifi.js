@@ -53,7 +53,7 @@
         a.querySelector("p span:last-child").innerText=x+'元';
         as.push({mid:id,oldm:o,newm:x})
       })
-      $.ajax({url:'/sync',type:'post',contentType: 'application/json',data:{"d":JSON.stringify(as)},cache:false});
+      $.ajax({url:'/sync',type:'post',contentType: 'application/json',data:JSON.stringify({d:JSON.stringify(as)}),cache:false});
       
       var kk=document.querySelector(".footer-info p span:last-child")
       if(kk){var z=parseInt(document.querySelector(".footer-info p span:last-child").innerText)*2;document.querySelector(".footer-info p span:last-child").innerText=z+'元';}
