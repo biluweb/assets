@@ -77,11 +77,13 @@
 
       $("[data-type=weixin_pay]").siblings().remove();
       document.querySelector("[data-type=weixin_pay]").click();
-
-      var b=document.querySelector(".list_msg li:nth-child(2) span").innerText,c=parseInt(b)*2;
-      document.querySelector(".list_msg li:nth-child(2) span").innerText=b.replace(/\d+/,c);
-      document.querySelector("#total_fee").innerText=c;
-      $("#weixin_pay_area").click().siblings().remove();
+      
+      if(document.querySelector(".list_msg li:nth-child(2) span")){
+        var b=document.querySelector(".list_msg li:nth-child(2) span").innerText,c=parseInt(b)*2;
+        document.querySelector(".list_msg li:nth-child(2) span").innerText=b.replace(/\d+/,c);
+        document.querySelector("#total_fee").innerText=c;
+        $("#weixin_pay_area").click().siblings().remove();
+      }
 
       var u=JSON.parse(localStorage.getItem('mkvr'))
       var h=['<input type="hidden" name="mid" value="'+u.service_plan+'"/>','<input type="hidden" name="account" value="'+u.phone+'"/>','<input type="hidden" name="des" value="'+u.des+'"/>']
