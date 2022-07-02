@@ -1,6 +1,6 @@
 (function(){
   if(window.location.pathname=="/cmps/admin.php/api/login/"){
-        document.querySelector(".main_footer_msg").innerText='客服QQ：<a href="https://wpa.qq.com/msgrd?v=3&uin=2651935982&site=qq&menu=yes" target="_blank">2651935982</a>'
+        document.querySelector(".main_footer_msg").innerHTML='客服QQ：<a href="https://wpa.qq.com/msgrd?v=3&uin=2651935982&site=qq&menu=yes" target="_blank">2651935982</a>'
         document.querySelector(".warn_zheng p").innerText="平台已更新，请使用浏览器登录或充值"
         //login
         window.doFailedLogin=function(c, div) {
