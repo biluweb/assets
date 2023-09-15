@@ -2566,8 +2566,8 @@ $(function() {
                 //获取当前 二级 属性名
                 var dxds_name = title_arr[k];
                 var playid = arr[ball_name][dxds_name];
-                var maxrate = yrates[playid] ? yrates[playid].maxrate : ""
-                    //console.log(dxds_name,playid);
+                var maxrate = yrates[playid] ? yrates[playid].maxrate : "";
+                //console.log(dxds_name,playid);
                 temp.append('<td class="ball_bg Bxxx Bxxx' + k + i + ' Bm1 dx_x ds_s" data-wanfa="' + playid + '">' + title_arr[k] + '</td>');
                 temp.append('<td class="ball_ff Bxxx Bxxx' + k + i + ' Bm1 dx_x ds_s"><span rate="true">' + maxrate + '</span></td>');
                 temp.append('<td class="ball_ff Bxxx Bxxx' + k + i + ' Bm1 dx_x ds_s bipt"><input type="text" class="rate_input" value="" data-wanfa="' + playid + '"></td>');
@@ -2608,8 +2608,9 @@ $(function() {
             //获取当前 二级 属性名
             var dxds_name = title_arr[i];
             var playid = arr[dxds_name];
+            var maxrate = yrates[playid] ? yrates[playid].maxrate : "";
             temp.append('<td class="ball_bg Bxxx Bxxx' + i + ' Bm1 dx_x ds_s" data-wanfa="' + playid + '">' + dxds_name + '</td>');
-            temp.append('<td class="ball_ff Bxxx Bxxx' + i + ' Bm1 dx_x ds_s"><span rate="true">' + yrates[playid].maxrate + '</span></td>');
+            temp.append('<td class="ball_ff Bxxx Bxxx' + i + ' Bm1 dx_x ds_s"><span rate="true">' + maxrate + '</span></td>');
             temp.append('<td class="ball_ff Bxxx Bxxx' + i + ' Bm1 dx_x ds_s bipt"><input type="text" class="rate_input" value="" data-wanfa="' + playid + '"></td>');
         }
         box_body.append(temp);
