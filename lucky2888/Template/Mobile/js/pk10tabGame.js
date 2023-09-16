@@ -1,14 +1,14 @@
-$(function () {
+$(function() {
     var inputVal = ''; //用户填写的倍数
     var zhushus = []; //注数数组;
     var currNumber = [] //存储每组位数的数组
     var minMoney = 2; //每注金额
-    var lastMoney = 0.00;//计算出的金额
-    var AllZhushu = 0;//方案注数
-    var AllMoney = 0;//方案注数金额
-    var danshiNumberL = 0;//单式号码长度
-    var yesArr = [];//单式正确的数组
-    var orderList = [];//投注数组
+    var lastMoney = 0.00; //计算出的金额
+    var AllZhushu = 0; //方案注数
+    var AllMoney = 0; //方案注数金额
+    var danshiNumberL = 0; //单式号码长度
+    var yesArr = []; //单式正确的数组
+    var orderList = []; //投注数组
     var yrates = k3lotteryrates.rates;
 
     var _thisPlayid = '';
@@ -42,10 +42,10 @@ $(function () {
         gameSwitch($('.bet_filter_box'), pks_xyp_title, pks_xyp_arr);
         rates = yrates[_thisPlayid];
         $('.play_select_prompt').find('span[way-data="tabDoc"]')
-            .html('信用盘为经典玩法，下注金额为<em style="color:red;">1元</em>投注模式。');//+ rates.maxjj +
+            .html('信用盘为经典玩法，下注金额为<em style="color:red;">1元</em>投注模式。'); //+ rates.maxjj +
         changeXYPGame();
-        gameNumberXYP(pks_lmp_lmp1,pks_lmp_arr1,24);
-        gameNumberXYP(pks_lmp_lmp2,pks_lmp_arr2,24);
+        gameNumberXYP(pks_lmp_lmp1, pks_lmp_arr1, 24);
+        gameNumberXYP(pks_lmp_lmp2, pks_lmp_arr2, 24);
     }
 
     tabGameInit();
@@ -54,38 +54,38 @@ $(function () {
         $('.reduce').addClass('noReduce');
     }
 
-    $('.selectMultipInput').bind('click',function(){
+    $('.selectMultipInput').bind('click', function() {
         $(this).select();
     });
 
     //倍数减
-    $('.reduce').on('click', function () {
-        addAndSubtract('-');
-        countMoney();
-    })
-    //倍数加
-    $('.selectMultiple .add').on('click', function () {
-        addAndSubtract('+');
-        countMoney();
-    })
-    //倍数输入框
-    $('.selectMultipInput').on('change keyup', function () {
+    $('.reduce').on('click', function() {
+            addAndSubtract('-');
+            countMoney();
+        })
+        //倍数加
+    $('.selectMultiple .add').on('click', function() {
+            addAndSubtract('+');
+            countMoney();
+        })
+        //倍数输入框
+    $('.selectMultipInput').on('change keyup', function() {
         addAndSubtract();
         countMoney();
     })
 
     //人民币单位换算
-    $('.selectMultipleCon').on('change', function () {
+    $('.selectMultipleCon').on('change', function() {
         countMoney();
     })
 
-    $(document).on('click', '.random5', function () {
+    $(document).on('click', '.random5', function() {
         for (var aa = 0; aa < 5; aa++) {
             randomTouzhu();
         }
     })
 
-    $(document).on('click', '.random1', function () {
+    $(document).on('click', '.random1', function() {
         for (var aa = 0; aa < 1; aa++) {
             randomTouzhu();
         }
@@ -145,7 +145,7 @@ $(function () {
 
             ceshi.eq(i).find('a').eq(randomsumber).addClass('curr');
 
-            ceshi.eq(i).find('.curr').each(function () {
+            ceshi.eq(i).find('.curr').each(function() {
                 arr.push(parseInt($(this).text()) - 1);
             })
 
@@ -183,10 +183,10 @@ $(function () {
         ceshi.find('.selectNumber').removeClass('curr');
         $('#text').val('');
 
-        if(_thisPlayid == 'lmp' || _thisPlayid == 'gyh' || _thisPlayid == 'yzwm'){
+        if (_thisPlayid == 'lmp' || _thisPlayid == 'gyh' || _thisPlayid == 'yzwm') {
             //获取总个数
             var length = $('.g_Number_Section .game_ball').length;
-            randomsumber = Math.round(Math.random() * length+1);
+            randomsumber = Math.round(Math.random() * length + 1);
             $('.g_Number_Section').find('.game_ball').eq(randomsumber).addClass('active');
             $('.betting_right_btn').click();
             return;
@@ -286,7 +286,7 @@ $(function () {
     }
 
     //号码点击
-    $('.g_Number_Section').on('click', '.selectNumbers a', function () {
+    $('.g_Number_Section').on('click', '.selectNumbers a', function() {
         if (_thisPlayid == 'q3_zxbd' || _thisPlayid == 'z3_zxbd' || _thisPlayid == 'h3_zxbd' || _thisPlayid == 'q2_zsxbd' || _thisPlayid == 'h2_zsxbd') {
             $(this).addClass('curr').siblings().removeClass('curr');
         } else {
@@ -635,11 +635,11 @@ $(function () {
 
 
     //投注区删除单个
-    $('.yBettingLists').on('click', '.sc', function () {
+    $('.yBettingLists').on('click', '.sc', function() {
         var len = $('.yBettingLists').find('.yBettingList');
         var _id = $(this).parent().attr('id');
         var indexs = 0;
-        len.each(function (i) {
+        len.each(function(i) {
             if (_id == orderList[i].trano) {
                 indexs = i;
             }
@@ -656,13 +656,13 @@ $(function () {
     })
 
     //少于一注
-    $('.yBettingLists').on('click', '.numberInfo', function () {
+    $('.yBettingLists').on('click', '.numberInfo', function() {
         var text = $(this).siblings('.number').find('em').text();
         alt(text);
     })
 
     //清空单号
-    $('#orderlist_clear').on('click', function () {
+    $('#orderlist_clear').on('click', function() {
         $('.yBettingLists').html('');
         $('#lanIconNumbere').text('0').css('display', 'none');
         $('#orderlist_clear').hide();
@@ -671,7 +671,7 @@ $(function () {
     })
 
     //单式textarea框
-    $('.g_Number_Section').on('change keyup', '#text', function () {
+    $('.g_Number_Section').on('change keyup', '#text', function() {
         chkPrice(this);
         chkLast(this);
         var text = $('#text').val();
@@ -723,19 +723,19 @@ $(function () {
     }
 
     //删除错误项
-    $('.g_Number_Section').on('click', '.remove_btn', function () {
+    $('.g_Number_Section').on('click', '.remove_btn', function() {
         var text = $('#text').val();
         checkNumber(text, danshiNumberL, 'remove');
     })
 
     //检查格式是否正确
-    $('.g_Number_Section').on('click', '.test_istrue', function () {
+    $('.g_Number_Section').on('click', '.test_istrue', function() {
         var text = $('#text').val();
         checkNumber(text, danshiNumberL, 'test');
     })
 
     //清空文本
-    $('.g_Number_Section').on('click', '.empty_text', function () {
+    $('.g_Number_Section').on('click', '.empty_text', function() {
         $('#text').val('');
         currNumber = [];
         zhushus = [];
@@ -750,7 +750,7 @@ $(function () {
     })
 
     //玩法内容切换
-    $('.bet_filter_box').on('click', '.bet_options', function () {
+    $('.bet_filter_box').on('click', '.bet_options', function() {
         $('.zhushu').text(0);
         $('.selectMultipleOldMoney').text(0.00);
         $('#selectMultipleTId').hide();
@@ -825,28 +825,28 @@ $(function () {
                 break;
             case 'lmp':
                 $('.play_select_prompt').find('span[way-data="tabDoc"]')
-                    .html('信用盘为经典玩法，下注金额为<em style="color:red;">1元</em>投注模式。');//+ rates.maxjj +
+                    .html('信用盘为经典玩法，下注金额为<em style="color:red;">1元</em>投注模式。'); //+ rates.maxjj +
                 changeXYPGame();
-                gameNumberXYP(pks_lmp_lmp1,pks_lmp_arr1,24);
-                gameNumberXYP(pks_lmp_lmp2,pks_lmp_arr2,24);
+                gameNumberXYP(pks_lmp_lmp1, pks_lmp_arr1, 24);
+                gameNumberXYP(pks_lmp_lmp2, pks_lmp_arr2, 24);
                 break;
             case 'gyh':
                 $('.play_select_prompt').find('span[way-data="tabDoc"]')
-                    .html('信用盘为经典玩法，下注金额为<em style="color:red;">1元</em>投注模式。');//+ rates.maxjj +
+                    .html('信用盘为经典玩法，下注金额为<em style="color:red;">1元</em>投注模式。'); //+ rates.maxjj +
                 changeXYPGame();
-                gameNumberXYP(pks_gyh,pks_gys_arr,24);
+                gameNumberXYP(pks_gyh, pks_gys_arr, 24);
                 break;
             case 'yzwm':
                 $('.play_select_prompt').find('span[way-data="tabDoc"]')
-                    .html('信用盘为经典玩法，下注金额为<em style="color:red;">1元</em>投注模式。');//+ rates.maxjj +
+                    .html('信用盘为经典玩法，下注金额为<em style="color:red;">1元</em>投注模式。'); //+ rates.maxjj +
                 changeXYPGame();
-                gameNumberXYP(pks_yzwm,pks_yzsm_arr,24);
+                gameNumberXYP(pks_yzwm, pks_yzsm_arr, 24);
                 break;
             case 'lzsm':
                 $('.play_select_prompt').find('span[way-data="tabDoc"]')
-                    .html('信用盘为经典玩法，下注金额为<em style="color:red;">1元</em>投注模式。');//+ rates.maxjj +
+                    .html('信用盘为经典玩法，下注金额为<em style="color:red;">1元</em>投注模式。'); //+ rates.maxjj +
                 changeXYPGame();
-                gameNumberXYP(pks_lzsm,pks_yzsm_arr,24);
+                gameNumberXYP(pks_lzsm, pks_yzsm_arr, 24);
                 break;
                 break;
         }
@@ -891,21 +891,22 @@ $(function () {
     }
 
     //生成信用盘
-    function gameNumberXYP(arr,title_arr,width){
+    function gameNumberXYP(arr, title_arr, width) {
         var box = $('.g_Number_Section .game_table');
-        for(var i = 0;i<Object.keys(arr).length;i++){
+        for (var i = 0; i < Object.keys(arr).length; i++) {
             var game_area = $('<div class="game_area clearfix"></div>');
             var ball_name = Object.keys(arr)[i];
             //新增标题
-            game_area.append($('<div class="game_title"><span>'+ ball_name+'</span></div>'));
+            game_area.append($('<div class="game_title"><span>' + ball_name + '</span></div>'));
             var game_balls = $('<ul class="clearfix"></ul>');
-            for(var k = 0;k<title_arr.length;k++){
+            for (var k = 0; k < title_arr.length; k++) {
                 var dxds_name = title_arr[k];
                 var playid = arr[ball_name][dxds_name];
-                var game_ball = $('<li style="width: '+width+'%"><div class="game_ball" data-wanfa="'+playid+'">' +
-                    '<span>'+ dxds_name +'</span>'+
-                    '<span>'+ yrates[playid].rate +'</span>'+
-                    '<span class="xyp_icon">￥</span>'+
+                var rate = yrates[playid] ? yrates[playid].rate : "";
+                var game_ball = $('<li style="width: ' + width + '%"><div class="game_ball" data-wanfa="' + playid + '">' +
+                    '<span>' + dxds_name + '</span>' +
+                    '<span>' + rate + '</span>' +
+                    '<span class="xyp_icon">￥</span>' +
                     '</div></li>');
                 game_balls.append(game_ball);
             }
@@ -916,22 +917,22 @@ $(function () {
 
     function addNumberLanAn() {
         $('.lanIconNumber').show();
-        $('#lanIconNumberss').animate({'left': '303', 'top': '-50px'}, 500, function () {
-            $(this).animate({'top': '10px', 'opacity': '0'}, 500, function () {
+        $('#lanIconNumberss').animate({ 'left': '303', 'top': '-50px' }, 500, function() {
+            $(this).animate({ 'top': '10px', 'opacity': '0' }, 500, function() {
                 $(this).css('display', 'none');
                 $('#selectMultipleTId').hide();
                 $('#addIconId').hide();
                 $('#selectMultipleB_nId').hide();
                 $('.addtobetbtn').css('background', '#252625');
                 $('#selectMultipleLz_show').removeClass('selectMultipleLzAdd');
-                $(this).css({'left': '28px', 'top': '10px', 'opacity': '100'})
+                $(this).css({ 'left': '28px', 'top': '10px', 'opacity': '100' })
             })
         })
         $('#lanIconNumbere').text(parseInt($('#lanIconNumbere').text()) + 1);
     }
 
     //确认选号，添加到投注区
-    $('.addtobetbtn').on('click', function () {
+    $('.addtobetbtn').on('click', function() {
         var yBetting = $('.yBettingList');
         var menu0 = $('.play_select_tit').find('.curr').text();
         var menu1 = $('#bet_filter').find('.curr').parent().siblings('.title').text();
@@ -968,7 +969,7 @@ $(function () {
 
             }
 
-            yBetting.each(function (i) {
+            yBetting.each(function(i) {
                 var gameNumber = $(this).find('.number em').text();
                 var gameNumberType = $(this).find('.number .yBettingType').text();
                 var _thisType = '[' + menu0 + ',' + menu1 + ',' + menu2 + ']';
@@ -1049,7 +1050,7 @@ $(function () {
 
 
     //确认投注
-    $(document).on("click", "#f_submit_order", function () {
+    $(document).on("click", "#f_submit_order", function() {
         if (orderList.length < 1) {
             alt('请选择投注号码', -1);
             return false;
@@ -1070,9 +1071,8 @@ $(function () {
         artDialog({
             title: "投注详情<span style='margin-left:15px;'><img src='" + WebConfigs["ROOT"] + "/resources/images/icon/icon_09.png'>截至时间:<strong class='sty-h gametimes' style='font-weight:normal'>00:00:00</strong></span>",
             content: $("#submitComfirebox").html(),
-            cancel: function () {
-            },
-            ok: function () {
+            cancel: function() {},
+            ok: function() {
                 if (!user) {
                     alt('请先登陆', -1);
                 }
@@ -1084,10 +1084,10 @@ $(function () {
                         'expect': lottery.currFullExpect,
                         'lotteryname': lotteryname
                     },
-                    beforeSend: function () {
+                    beforeSend: function() {
                         $('.looding').show();
                     },
-                    success: function (json) {
+                    success: function(json) {
                         if (json.sign) {
                             $("#orderlist_clear").click();
                             alt('投注成功', 1);
@@ -1103,8 +1103,8 @@ $(function () {
     });
 
     //玩法切换
-     //玩法切换
-    $(document).on('click', '#j_play_select .play_select_tit li', function () {
+    //玩法切换
+    $(document).on('click', '#j_play_select .play_select_tit li', function() {
         $('.zhushu').text('0');
         $('.selectMultipleOldMoney').text('0.00');
         $('#selectMultipleTId').hide();
@@ -1178,10 +1178,10 @@ $(function () {
                 gameSwitch($('.bet_filter_box'), pks_xyp_title, pks_xyp_arr);
                 rates = yrates[_thisPlayid];
                 $('.play_select_prompt').find('span[way-data="tabDoc"]')
-                    .html('信用盘为经典玩法，下注金额为<em style="color:red;">1元</em>投注模式。');//+ rates.maxjj +
+                    .html('信用盘为经典玩法，下注金额为<em style="color:red;">1元</em>投注模式。'); //+ rates.maxjj +
                 changeXYPGame();
-                gameNumberXYP(pks_lmp_lmp1,pks_lmp_arr1,24);
-                gameNumberXYP(pks_lmp_lmp2,pks_lmp_arr2,24);
+                gameNumberXYP(pks_lmp_lmp1, pks_lmp_arr1, 24);
+                gameNumberXYP(pks_lmp_lmp2, pks_lmp_arr2, 24);
                 break;
         }
         var menu0 = $('.play_select_tit').find('.curr').text();
@@ -1190,14 +1190,14 @@ $(function () {
     })
 
     //全，大，小，奇，偶，清
-    $('.g_Number_Section').on('click', '.selectNumberFilters a', function () {
+    $('.g_Number_Section').on('click', '.selectNumberFilters a', function() {
         var _thisAttr = $(this).attr('data-param');
         switch (_thisAttr) {
             case 'js-btn-all':
                 $(this).parent().siblings('.selectNumbers').find('a').addClass('curr');
                 break;
             case 'js-btn-big':
-                $(this).parent().siblings('.selectNumbers').find('a').each(function (i) {
+                $(this).parent().siblings('.selectNumbers').find('a').each(function(i) {
                     if (i < 5) {
                         $(this).removeClass('curr');
                     } else {
@@ -1206,7 +1206,7 @@ $(function () {
                 })
                 break;
             case 'js-btn-small':
-                $(this).parent().siblings('.selectNumbers').find('a').each(function (i) {
+                $(this).parent().siblings('.selectNumbers').find('a').each(function(i) {
                     if (i >= 5) {
                         $(this).removeClass('curr');
                     } else {
@@ -1215,7 +1215,7 @@ $(function () {
                 })
                 break;
             case 'js-btn-odd':
-                $(this).parent().siblings('.selectNumbers').find('a').each(function (i) {
+                $(this).parent().siblings('.selectNumbers').find('a').each(function(i) {
                     if (parseInt($(this).attr('data-number')) % 2 == 0) {
                         $(this).removeClass('curr');
                     } else {
@@ -1224,7 +1224,7 @@ $(function () {
                 });
                 break;
             case 'js-btn-even':
-                $(this).parent().siblings('.selectNumbers').find('a').each(function (i) {
+                $(this).parent().siblings('.selectNumbers').find('a').each(function(i) {
                     if (parseInt($(this).attr('data-number')) % 2 != 0) {
                         $(this).removeClass('curr');
                     } else {
@@ -1567,7 +1567,7 @@ $(function () {
         var eachZhushus = 0;
         var eachMoneys = 0;
 
-        $('.yBettingList').each(function (i) {
+        $('.yBettingList').each(function(i) {
             var eachZhushu = parseInt($(this).find('.yBettingZhushu em').text());
             var eachMoney = parseFloat($(this).find('#betting_money').text());
             eachZhushus += eachZhushu;
@@ -1593,7 +1593,9 @@ $(function () {
 
     //组合排列
     function combination(arr) {
-        var sarr = [[]];
+        var sarr = [
+            []
+        ];
 
         for (var i = 0; i < arr.length; i++) {
             var sta = [];
@@ -1622,9 +1624,9 @@ $(function () {
     //获取每个位数选中的数
     function currList() {
         var currArr = [];
-        $('.selectNumbers').each(function (i) {
+        $('.selectNumbers').each(function(i) {
             var acArr = [];
-            $(this).find('.curr').each(function (i) {
+            $(this).find('.curr').each(function(i) {
                 acArr.push($(this).text());
             })
             currArr.push(acArr);
@@ -1644,45 +1646,48 @@ $(function () {
     }
 
     //非法字符截取
- function chkLast(obj) {
+    function chkLast(obj) {
         if (obj.value.substr((obj.value.length - 1), 1) == '.')
             obj.value = obj.value.substr(0, (obj.value.length - 1));
     }
 
-    function changeXYPGame(){
+    function changeXYPGame() {
         $('.selectMultipleT').hide();
         $('.g_Number_Section').empty();
         $('.g_Number_Section').append('<div class="game_table"></div>');
         $('.lottery_footer').show();
     }
 
-    $('.g_Number_Section').on('click','.game_ball',function(){
+    $('.g_Number_Section').on('click', '.game_ball', function() {
         var isActive = $(this).hasClass('active');
-        if(isActive){
+        if (isActive) {
             $(this).removeClass('active');
-            $(this).find('.xyp_icon').css('display','none');
-            if($('.g_Number_Section .active').length <=0) $('.lottery_footer').hide();
-        }else{
+            $(this).find('.xyp_icon').css('display', 'none');
+            if ($('.g_Number_Section .active').length <= 0) $('.lottery_footer').hide();
+        } else {
             $(this).addClass('active');
-            $(this).find('.xyp_icon').css('display','block');
+            $(this).find('.xyp_icon').css('display', 'block');
             $('.lottery_footer').show();
         }
         //countXYP();
     });
 
     //点击投注按钮
-    $('.betting_right_btn').on('click',function(){
+    $('.betting_right_btn').on('click', function() {
         var money = $('.rate_input').val();
-        if(money == ''){
-            alt('请设置投注金额',-1);return false;
+        if (money == '') {
+            alt('请设置投注金额', -1);
+            return false;
         }
 
-        if(parseInt(money) == 'NaN'){
-            alt('请设置正确的投注金额',-1);return false;
+        if (parseInt(money) == 'NaN') {
+            alt('请设置正确的投注金额', -1);
+            return false;
         }
 
-        if($('.g_Number_Section li>.active').length <= 0){
-            alt('请选择投注内容',-1);return false;
+        if ($('.g_Number_Section li>.active').length <= 0) {
+            alt('请选择投注内容', -1);
+            return false;
         }
 
         var yBetting = $('.yBettingList');
@@ -1691,25 +1696,25 @@ $(function () {
         var menu2 = $('#bet_filter').find('.curr').text();
 
         //将号码添加到选号区
-        $('.g_Number_Section li>.active').each(function(){
+        $('.g_Number_Section li>.active').each(function() {
             var price = $('.rate_input').val();
             var playid = $(this).data("wanfa");
             var rate = yrates[playid];
             var arr = {
-                'trano' :generateMixed(20),
+                'trano': generateMixed(20),
                 'playtitle': rate.title,
                 'playid': rate.playid,
-                'number':$(this).find('span:nth-child(1)').html().trim(),
-                'zhushu':1,
-                'price':price,
-                'yjf':1,
-                'beishu':1,
-                'maxjj':rate.rate,
+                'number': $(this).find('span:nth-child(1)').html().trim(),
+                'zhushu': 1,
+                'price': price,
+                'yjf': 1,
+                'beishu': 1,
+                'maxjj': rate.rate,
                 'minxf': rate.minxf,
                 'totalzs': rate.totalzs,
                 'minjj': rate.minjj,
                 'maxzs': rate.maxzs,
-                'rate':rate.maxrate,
+                'rate': rate.maxrate,
             };
             orderList.push(arr);
 
@@ -1740,7 +1745,7 @@ $(function () {
                 '</dd>';
             $('.yBettingLists').append(html);
         });
-        $('#lanIconNumbere').text($('.yBettingLists').find('.yBettingList').length).css('display','block');
+        $('#lanIconNumbere').text($('.yBettingLists').find('.yBettingList').length).css('display', 'block');
         $('.betting_empty').click();
         $('.lottery_footer').hide();
         $('.selectMultipleLz_show').click();
@@ -1749,23 +1754,23 @@ $(function () {
     });
 
     //清空已选
-    $('.betting_empty').on('click',function(){
+    $('.betting_empty').on('click', function() {
         $('.g_Number_Section .game_ball').removeClass('active');
         //$('.addtobetbtn').css('background', '#252625');//$('.addtobetbtn').css('background', '#dc3b40');
         countAll();
-        $('.xyp_icon').css('display','none');
+        $('.xyp_icon').css('display', 'none');
     });
 
-    $('.rate_input').on('keyup',function (e) {
+    $('.rate_input').on('keyup', function(e) {
         var c = $(this);
         //删除非数字
-        if(/[^\d]/.test(c.val())){
-            var temp_amount=c.val().replace(/[^\d]/g,'');
+        if (/[^\d]/.test(c.val())) {
+            var temp_amount = c.val().replace(/[^\d]/g, '');
             $(this).val(temp_amount);
         }
 
         var code = parseInt(e.keyCode);
-        if (code >= 96 && code <= 105 || code >= 48 && code <= 57 || code == 8)  return true;
+        if (code >= 96 && code <= 105 || code >= 48 && code <= 57 || code == 8) return true;
         else return false;
     });
 
