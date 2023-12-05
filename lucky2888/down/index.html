@@ -1,0 +1,40 @@
+<html><head>
+<meta charset="utf-8">
+<title>幸运彩票APP下载</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta content="telephone=no" name="format-detection">
+<link rel="stylesheet" href="mobile.css">
+</head>
+<body class="page-down">
+    <div class="cont-wrap">
+        <div class="row">
+        <a href="javascript:downloadUrlFile('https://biluweb.github.io/assets/soft/xinyunln.apk');" class="app android"><i></i><span>安卓下载</span></a>
+        <a href="javascript:downloadUrlFile('https://biluweb.github.io/assets/soft/xinyunln.mobileconfig');" class="app ios"><i></i><span>苹果下载</span></a>
+        </div>
+        <div class="row alink"><a href="/" class="quest">返回首页</a><br><br>
+        <a href="javascript:;" class="quest" id="quest">下载遇到了问题？</a></div>
+    </div>
+    <div id="tips" class="wrap">
+        <ul>
+            <li>请查看您的设备是否启用了移动网络或WiFi连接</li>
+            <li>如下载中断导致安装失败，请删除旧的APP后重新扫码下载</li>
+            <li>iPhone系统版本低于8.0或进行过越狱操作，可能导致安装失败</li>
+            <li>如始终无法正常下载安装，请联系客服并提供您的手机型号和系统版本，我们将第一时间为您解决问题</li>
+        </ul>
+        <div class="i-know" id="hideTips">我知道了</div>
+    </div>
+<script>
+// 通过url进行下载
+function downloadUrlFile (url) {
+  var a = document.createElement('a')
+  document.body.appendChild(a)
+  a.style = 'display: none'
+  a.href = url
+  a.click()
+  window.URL.revokeObjectURL(url)
+}
+</script>
+
+</body></html>

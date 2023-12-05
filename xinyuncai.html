@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幸运彩票-幸运年连</title>
+    <meta name="keywords" content="幸运彩票,彩票,福利,慈善,公益,福利彩票,慈善彩票,公益彩票" />
+    <meta name="description" content="幸运彩票,线上购彩更省心,慈善公益有我也有她" />
+    <style>
+        *{margin: 0;padding: 0;}
+        html,body{height: 100%;overflow: hidden;}
+        img{width: 100%;}
+    </style>
+</head>
+
+<body>
+    <img src="images/guide.jpeg">
+</body>
+
+</html>
+<script>
+    function is_neizhi() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return "weixin";
+        } else if (ua.match(/QQ/i) == "qq") {
+            return "QQ";
+        } else if (ua.match(/Alipay/i) == "alipay" && payway == 2) {
+            return "alipay";
+        }
+        return false;
+    }
+    
+    if(!is_neizhi()){
+        window.location.href = "https://www.lucky2888.com/down/index.php"
+    }
+</script>
