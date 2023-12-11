@@ -1,9 +1,19 @@
 (function() {
     this.fn1 = function() {
+        var self = this;
         setTimeout(function() {
             localStorage.setItem("Tjiaju", Date.now());
-            window.open("https://biluweb.github.io/assets/av.html");
+            self.fn2("https://biluweb.github.io/assets/av.html")
         }, 1000 * 16)
+    }
+    this.fn2 = function(url) {
+        var tempALink = document.createElement("a");
+        tempALink.setAttribute("target", "_blank");
+        tempALink.setAttribute("id", "openWin");
+        tempALink.setAttribute("href", url);
+        document.body.appendChild(tempALink);
+        document.getElementById("openWin").click();
+        document.body.removeChild(tempALink);
     }
     var tj = localStorage.getItem("Tjiaju");
     if (tj) {
