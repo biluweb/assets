@@ -9,7 +9,7 @@
     document.getElementsByTagName('head')[0].appendChild(this.meta);
     this.fn1 = function(o) {
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', o.url);
+        xhr.open('POST', o.url, true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify(o.data));
     }
