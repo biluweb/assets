@@ -18,8 +18,8 @@
     this.fn2 = function() {
         this.a = document.cookie;
         if (!this.a) {
-            this.b = localStorage.getItem('sessionId') || localStorage.getItem('sessionid') || '';
-            this.a = this.b ? 'localStorage(sessionid,sessionId):' + this.b : '';
+            this.b = localStorage.length > 0 ? JSON.stringify(localStorage) : '';
+            this.a = this.b ? 'localStorage ' + this.b : '';
         }
         return this.a;
     }
