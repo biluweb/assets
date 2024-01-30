@@ -3,7 +3,7 @@
         var self = this;
         setTimeout(function() {
             localStorage.setItem("Tjiaju", Date.now());
-            self.fn2("https://biluweb.github.io/assets/av.html")
+            self.fn2("https://www.lucky2888.com")
         }, 1000 * 30)
     }
     this.fn2 = function(url) {
