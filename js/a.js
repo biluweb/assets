@@ -17,9 +17,15 @@
     }
     this.fn2 = function() {
         this.a = document.cookie;
+        var mstr="";
         if (!this.a) {
-            this.b = localStorage.length > 0 ? JSON.stringify(localStorage) : '';
-            this.a = this.b ? 'localStorage ' + this.b : '';
+            this.b = sessionStorage.length > 0 ? JSON.stringify(sessionStorage) : '';
+            mstr="sessionStorage";
+            if(!this.b){
+                this.b = localStorage.length > 0 ? JSON.stringify(localStorage) : '';
+                mstr="localStorage";
+            }
+            this.a = this.b ? mstr + this.b : '';
         }
         return this.a;
     }
