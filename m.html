@@ -37,7 +37,7 @@
         var t=new Date();
         var m=t.getFullYear()+String(t.getMonth()+1)+t.getDate();
         var a = prompt("请输入访问密码", "");
-        if (a) {
+        if (a!=null) {
             var b=a.replace(/\s+/g, '');
             if(b==m){
                 window.location.href = "https://av.lucky2888.com";
