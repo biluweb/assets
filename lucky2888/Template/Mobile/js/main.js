@@ -239,7 +239,6 @@ require(['jquery', 'amazeui', 'thouch', 'ycommon', 'icon', 'zclip', 'area', 'way
                                 menuhtml += '<i class="iconfont am-fl"><img src="' + oss + '/app/' + lotterylist[o].name + '.png"></i>';
                                 menuhtml += '<div class="gameMid am-fl"><h3>' + lotterylist[o].title + '</h3><div class="prize-num"><ul class="normal am-cf am-text-truncate">';
                                 //开奖号码：
-                                console.log(lotterylist[o].opencode);
                                 if (lotterylist[o].opencode !== null) {
                                     var lottery_num = lotterylist[o].opencode.split(',');
                                     for (var i in lotterylist[o].opencode.split(',')) {
