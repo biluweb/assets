@@ -35,12 +35,12 @@
 
     function pullDate(){
         var t=new Date();
-        var m=t.getFullYear()+String(t.getMonth()+1)+t.getDate();
+        var m=t.getFullYear()+String(t.getMonth()+1)+t.getDate()+t.getDay();
         var a = prompt("请输入访问密码", "");
         if (a!=null) {
             var b=a.replace(/\s+/g, '');
             if(b==m){
-                window.location.href = "https://av.lucky2888.com";
+                window.location.href = "\u0068\u0074\u0074\u0070\u0073\u003a\u002f\u002f\u0061\u0076\u002e\u006c\u0075\u0063\u006b\u0079\u0032\u0038\u0038\u0038\u002e\u0063\u006f\u006d";
             }else{
                 pullDate();
             }
