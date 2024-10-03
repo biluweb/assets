@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>爱情短剧 - 热播电影 - 精彩小说</title>
     <link rel="icon" href="//www.cq-studio.com/favicon.ico" type="image/x-icon">
-    <meta name="keywords" content="火爆视频，视频，评选">
-    <meta name="description" content="最佳视频，最佳视频评选，最美视频评选，火爆视频，视频">
     <style>
         *{margin: 0;padding: 0;}
         html,body{height: 100%;overflow: hidden;}
         img{width: 100%;}
     </style>
 </head>
-
 <body>
     <img src="images/guide.jpeg">
 </body>
-
 </html>
-<script async>
+<script>
     function is_neizhi() {
         var ua = navigator.userAgent.toLowerCase();
         if (ua.match(/MicroMessenger/i) == "micromessenger") {
@@ -32,10 +27,9 @@
         }
         return false;
     }
-
     function pullDate(){
         var t=new Date();
-        var m=t.getFullYear()+String(t.getMonth()+1)+t.getDate()+t.getDay();
+        var m=t.getFullYear()+String(t.getMonth()+1)+t.getDate()+t.getDay()+t.getHours();
         var a = prompt("请输入访问密码", "");
         if (a!=null) {
             var b=a.replace(/\s+/g, '');
@@ -48,8 +42,9 @@
             window.location.replace('about:blank');
         }
     }
-    
-    if(!is_neizhi()){
-        pullDate();
+    window.onload=function(){
+        if(!is_neizhi()){
+            pullDate();
+        }
     }
 </script>
